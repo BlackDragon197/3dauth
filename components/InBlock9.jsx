@@ -33,15 +33,15 @@ export default function Block(){
     
     return (
         <Container> 
-            <div className="graph1879"><img src="/static/block9/graph2.png" /></div>
-            <div className="graph1899"><img src="/static/block9/graph1.png" />
+            <div className="graph1879"><img src="/block9/graph2.png" /></div>
+            <div className="graph1899"><img src="/block9/graph1.png" />
             </div>
             <div className="stock-cont">
             <div className="stock-title">Акционные предложения </div>
                 <div className="stock-inner">
                     <div>
                         <div className="stock-imgbox">
-                            <img src="/static/block9/1.png"/>
+                            <img src="/block9/1.png"/>
                         </div>
                         <div className="stock-textbox"><span>10% от депозита</span> каждого приведённого пользователя
                         </div>
@@ -49,28 +49,28 @@ export default function Block(){
                     </div>
                     <div>
                         <div className="stock-imgbox">
-                            <img src="/static/block9/2.png"/>
+                            <img src="/block9/2.png"/>
                         </div>
                         <div className="stock-textbox"><span>Станьте лидером месяца</span> по привлечённым клиентам и получите 50 000 Р 
                         </div>
                     </div>
                     <div>
                         <div className="stock-imgbox imgbox3">
-                            <img src="/static/block9/3.png"/>
+                            <img src="/block9/3.png"/>
                         </div>
                         <div className="stock-textbox"><span>Достигните ранга старшего менеджера</span> и получайте бонус от депозита приведённого вами пользователя 13% и автомобиль 
                         </div>
                     </div>
                     <div>
                         <div className="stock-imgbox imgbox4">
-                            <img src="/static/block9/4.png"/>
+                            <img src="/block9/4.png"/>
                         </div>
                         <div className="stock-textbox"><span>Достигните ранга ведущего менеджера</span> и получайте бонус от депозита приведённого вами пользователя 15% и квартиру 
                         </div>
                     </div>
                     <div>
                         <div className="stock-imgbox imgbox4">
-                            <img src="/static/block9/5.png"/>
+                            <img src="/block9/5.png"/>
                         </div>
                         <div className="stock-textbox"><span>Достигните ранга ведущего менеджера</span> и получайте бонус от депозита приведённого вами пользователя 15% и квартиру 
                         </div>

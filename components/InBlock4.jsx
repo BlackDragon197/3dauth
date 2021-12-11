@@ -37,7 +37,7 @@ const ContentZone2 = styled.div`
 height: ${props => props.height};
 width: 58vw;
 margin: 13.556vh 0 0 20vw;
-/*background: url('/static/block4/back22.png');
+/*background: url('/block4/back22.png');
 background-repeat: no-repeat;
     background-position: top center;
     background-size: 100%;*/
@@ -115,7 +115,7 @@ export default function Block(){
         
         <BLock id="invest">
             <Heading />
-            <Part1 src={'/static/block4/back1.png'} backsize={'72% 110%'} height='77vh'>
+            <Part1 src={'/block4/back1.png'} backsize={'72% 110%'} height='77vh'>
                 <ContentZone1 height="27.593vh"  margin="15.556vh auto">
                     <Hh fsize="2vw">
                         Депозит — Криптовалюта
@@ -134,7 +134,7 @@ export default function Block(){
                 </AddBtn>
                 </ContentZone1>
             </Part1>
-            <Part1 src={'/static/block4/back2.png'} backsize={'85%'} height={'65vh'}>
+            <Part1 src={'/block4/back2.png'} backsize={'85%'} height={'65vh'}>
                 <ContentZone2 height="42vh">
                     <ContentZone1 height="24.593vh" margin="15.556vh 0 0 2.8vw">
                         <Hh fsize="2vw">
@@ -155,7 +155,7 @@ export default function Block(){
             </Part1>
             <Part1 height="77vh">
                 <Dig style={{width: "20vw", height: "19.39vw", position:"absolute", left: "68vw"}}>
-                    <Image src="/static/block4/gold1.png" layout="fill" id="img-gold1"/>
+                    <Image src="/block4/gold1.png" layout="fill" id="img-gold1"/>
 
                 </Dig>
                 <ContentZone2 height="80vh">
@@ -190,7 +190,7 @@ export default function Block(){
                     
                 </ContentZone2>
                 <Dig style={{width: "15vw", height: "25.39vh", position:"relative", bottom: "18vh", left:"10vw", paddingBottom: "01vh"}}>
-                    <Image src="/static/block4/gold2.png" layout="fill" id="img-gold1"/>
+                    <Image src="/block4/gold2.png" layout="fill" id="img-gold1"/>
                 </Dig>
                 
             </Part1>

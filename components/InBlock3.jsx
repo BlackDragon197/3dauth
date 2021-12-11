@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import Image from 'next/image'
 import Heading from '../components/Heading3.jsx'
 import Col from '../components/col-3'
-//import ImgSvg1 from '../static/block3.1.svg'
+//import ImgSvg1 from '../block3.1.svg'
 import {Svg1, Svg2, Svg3, Svg4} from './svgs/svg1'
 
 const AddPostBtn = styled.a`
@@ -46,7 +46,7 @@ const BLock = styled.div`
     padding-top: 7.593vh;
     justify-content: center;
     align-items: center;
-    background: url('/static/block3.3.png'),url('/static/block3.2.png') ,url('/static/block3.1.png');
+    background: url('/block3.3.png'),url('/block3.2.png') ,url('/block3.1.png');
     background-size: 70%, 50%, 100%;
     background-repeat: no-repeat, no-repeat, no-repeat;
     background-position: center right, bottom 50% left, top right;
@@ -162,7 +162,7 @@ export default function Block(){
                 {peep}
                 <div style={{position:"relative", top: "72vh", left: "18.646vw", maxWidth:"30%"}}>
                 <AddPostBtn>Бесплатная регистрация 
-                <Image src='/static/lock.png' width="11%" height="14%" className="lock" />
+                <Image src='/lock.png' width="11%" height="14%" className="lock" />
                     
                    
                 </AddPostBtn>

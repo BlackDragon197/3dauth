@@ -23,7 +23,7 @@ const MyProvider = (props) => {
 const Button = () => {
   const ctx = useContext(MyContext)
   return (
-    <button onClick={ctx.toggleMenu}>Toggle menu</button>
+    <div><button onClick={ctx.toggleMenu}>Toggle menu</button> </div>
   )
 }
 

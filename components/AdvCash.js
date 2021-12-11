@@ -54,7 +54,7 @@ renderComponent(){
             <div className="col1 space">
                 <div className="col1in" onClick={() => this.setPayment(1)}>
                   <div className="c1">
-                    <Image src="/static/ADVCash.svg" width="120" height="40"/>
+                    <Image src="/ADVCash.svg" width="120" height="40"/>
                   </div>
                   <div>
                       AdvCash 
@@ -64,7 +64,7 @@ renderComponent(){
             {/* {<div className="col1 space" >
             <div className="col1in" onClick={() => this.setPayment(2)}>
                   <div className="c1">  
-                    <Image src="/static/Qiwi.svg" width="120" height="40"/>
+                    <Image src="/Qiwi.svg" width="120" height="40"/>
                   </div>
                   <div>
                       Perfect Money
@@ -74,7 +74,7 @@ renderComponent(){
             <div className="col1 space">
               <div className="col1in" onClick={() => this.setPayment(2)}>
                   <div className="c1" active="true">  
-                    <Image src="/static/usd.svg" width="120" height="40"/>
+                    <Image src="/usd.svg" width="120" height="40"/>
                   </div>
                   <div>
                       Прямая оплата
@@ -150,7 +150,7 @@ renderComponent(){
             flex-basis:100%;
           }
         .column3{
-          background-image: url(./public/static/block2.1.png);
+          background-image: url(./public/block2.1.png);
           background-size: 100%;
             display: flex;
             justify-content: flex-start;

@@ -74,12 +74,12 @@ if(!isMobile){
     return(
         <div style={{overflow: 'hidden'}}>
           
-        <div style={{position:'relative',height:'76.2%',display:'', background: '#F7F8FB', backgroundPosition: 'top right', backgroundImage:'url(/static/wrapperbg.png)', backgroundRepeat:'no-repeat', backgroundSize:'100%'}}>
+        <div style={{position:'relative',height:'76.2%',display:'', background: '#F7F8FB', backgroundPosition: 'top right', backgroundImage:'url(/wrapperbg.png)', backgroundRepeat:'no-repeat', backgroundSize:'100%'}}>
           <Head>
             <title>Pegas Capital</title>
           </Head>
           <Navbar />
-          <div className="graph1899"><img src="/static/block1/phone.png" /></div>
+          <div className="graph1899"><img src="/block1/phone.png" /></div>
           <div className="container" style={{ height:'48vh',backgroundPosition: 'bottom right, top right 18%', backgroundImage:'url(), url()', backgroundRepeat:'no-repeat', backgroundSize:'44%, 17%'}}>
           
           <Group top="12vh" left="12.240vw" height="54.427vh">
@@ -101,7 +101,7 @@ if(!isMobile){
         <AddBtn  width="16.667vw" background="#15274E" left="14.240vw" style={{position:'absolute', top:'17vw'}}>Программы сотрудничества                    
                        
         </AddBtn>
-        {/*<Image src='/static/coin.png' width='470px' height='500px' style={{position:'absolute', top:'0'}}/>*/}
+        {/*<Image src='/coin.png' width='470px' height='500px' style={{position:'absolute', top:'0'}}/>*/}
         </Group>
         </div>
     

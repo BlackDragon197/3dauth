@@ -33,11 +33,11 @@ export default function Block(){
     
     return (
         <Container> 
-            <div className="graph1879"><img src="/static/block7/graph1.png" />
+            <div className="graph1879"><img src="/block7/graph1.png" />
             </div>
-            <div className="hand"><img src="/static/block7/block7hand.png" />
+            <div className="hand"><img src="/block7/block7hand.png" />
             </div>
-            <div className="graph1899"><img src="/static/block7/block7.png" />
+            <div className="graph1899"><img src="/block7/block7.png" />
             </div>
             <Columna>
                 <h1 className="aims">Наши цели на 2022</h1>
@@ -63,7 +63,7 @@ export default function Block(){
             <style jsx>
             {`
             .aims-p p:nth-child(1){
-width: 86%;
+                width: 86%;
             }
             .aims-p p:nth-child(2){
                 width: 65%;

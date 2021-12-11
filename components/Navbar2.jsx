@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import Image from 'next/image'
-// import lockImg from '../public/static/coin.png'
+// import lockImg from '../public/coin.png'
 import Popup from '../components/Popup'
 import { useState } from 'react'
 
@@ -84,7 +84,7 @@ const [buttonPopup, setButtonPopup] = useState(false);
     <TopBarMenu>
         <NavbarItem margin="0 6vw 0 0">
             <Logo>
-                <img src="/static/footer/logo.png" />
+                <img src="/footer/logo.png" />
             </Logo>
         </NavbarItem>
             <NavbarItem>

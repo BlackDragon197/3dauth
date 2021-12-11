@@ -1,6 +1,6 @@
 import * as React from "react";
 import Image from "next/image";
-import { payQiwi } from "../lib/auth";
+import { payAdv } from "../lib/auth";
 
 
 
@@ -22,7 +22,7 @@ class Qiwi extends React.Component {
       }
 
     handleSend(e) {
-        payQiwi(this.state.amount);
+        payAdv(this.state.amount);
     }
 
     render() {

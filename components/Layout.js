@@ -1,9 +1,9 @@
 import Link from 'next/link'
 import { loginUser, logoutUser, getBtcPrice } from '../lib/auth'
 import Image from 'next/image'
-import logo from '../public/static/pegas.png'
+import logo from '../public/pegas.png'
 import {useEffect, useState} from 'react'
-import profileicon from '../public/static/profileicon.svg'
+import profileicon from '../public/profileicon.svg'
 
 const Layout = ({ title, children, auth }) => {
 

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import Image from 'next/image'
-// import lockImg from '../public/static/coin.png'
+// import lockImg from '../public/coin.png'
 import Popup from '../components/Popup'
 import { useState } from 'react'
 
@@ -84,7 +84,7 @@ const [buttonPopup, setButtonPopup] = useState(false);
     <TopBarMenu>
         <NavbarItem margin="0 6vw 0 0">
             <Logo>
-                <img src="/static/footer/logo.png" />
+                <img src="/footer/logo.png" />
             </Logo>
         </NavbarItem>
             <NavbarItem>
@@ -93,7 +93,7 @@ const [buttonPopup, setButtonPopup] = useState(false);
                 </NavBtn>
             </NavbarItem>
             <NavbarItem>
-                <NavBtn>
+                <NavBtn href="#faq">
                 Faq
                 </NavBtn>
             </NavbarItem>
@@ -103,18 +103,18 @@ const [buttonPopup, setButtonPopup] = useState(false);
                 </NavBtn>
             </NavbarItem>
             <NavbarItem>
-                <NavBtn>
+                <NavBtn  href="#contact">
                 Заказать звонок
                 </NavBtn>
             </NavbarItem>
             <NavbarItem  margin="0 3vw 0 0">
-                <NavBtn>
+                <NavBtn  href="#onas">
                 О Pegas
                 </NavBtn>
             </NavbarItem>
             <NavbarItem margin="0 0 0 2vw">
-                    <AddPostBtn  href="/login">Вход/регистрация 
-                    <Image src='/static/lock.png' width="11%" height="14%" className="lock" />  
+                    <AddPostBtn href="/login">Вход/регистрация 
+                    <Image src='/lock.png' width="11%" height="14%" className="lock" />  
                     </AddPostBtn>
                     <Popup trigger ={buttonPopup} setTrigger={setButtonPopup}> 
                 </Popup>

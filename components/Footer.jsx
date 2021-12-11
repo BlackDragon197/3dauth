@@ -46,7 +46,7 @@ export default function Block(){
         <Container> 
             
             
-            <div className="foot1"><img src="/static/footer/1.png" /></div>
+            <div className="foot1"><img src="/footer/1.png" /></div>
             <div className="footmenu">
                 <Navbar2 />
             </div>
@@ -56,16 +56,16 @@ export default function Block(){
                 <div className="footicons"><br />
                     <div style={{height: '36px', display: 'flex', alignItems: 'center'}}>
                         <a className="foota" href="">
-                        <img src="/static/footer/you.png" />
+                        <img src="/footer/you.png" />
                         </a>
                         <a href="https://www.facebook.com/profile.php?id=100074509421469">
-                        <img src="/static/footer/face.png" />
+                        <img src="/footer/face.png" />
                         </a>
                         <a href="https://instagram.com/pegas_capital?utm_medium=copy_link">
-                        <img src="/static/footer/insta.png" />
+                        <img src="/footer/insta.png" />
                         </a>
                         <a href="">
-                        <img src="/static/footer/teleg.png" />
+                        <img src="/footer/teleg.png" />
                         </a>
                     </div>
                 </div>

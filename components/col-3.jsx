@@ -31,9 +31,9 @@ width: ${props => props.width};
 top: ${props => props.top};
 `
 
-const srcs = [  {desc:"5 лет на рынке", content:"url(/static/block2g1.png);", width:"100vw", height:''},
-                {desc:"4000+ довольных клиентов", content:"url(/static/block2g2.png);", width:"10.990vw", top:"1.563vw"},
-                {desc:"1 млрд. Ꝑ заработали наши клиенты", content:"url(/static/block2g3.png);", width:"13.421vw", top:"1.563vw"}
+const srcs = [  {desc:"5 лет на рынке", content:"url(/block2g1.png);", width:"100vw", height:''},
+                {desc:"4000+ довольных клиентов", content:"url(/block2g2.png);", width:"10.990vw", top:"1.563vw"},
+                {desc:"1 млрд. Ꝑ заработали наши клиенты", content:"url(/block2g3.png);", width:"13.421vw", top:"1.563vw"}
             ];
 
 

@@ -99,7 +99,7 @@ export default function Block(){
                 </FormContent>
             </Form>
             <ImgCont>
-                <img src="/static/block5/phone.png" width="100%" height="100%"/>
+                <img src="/block5/phone.png" width="100%" height="100%"/>
             </ImgCont>
             
         </BlockCont>

@@ -11,7 +11,7 @@ const BLock = styled.div`
     padding-top: 7.593vh;
     justify-content: start;
     align-items: center;
-    background: url('/static/block2.png') no-repeat top right;
+    background: url('/block2.png') no-repeat top right;
     background-size: 100%;
 `
 

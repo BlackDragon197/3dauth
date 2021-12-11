@@ -4,7 +4,7 @@ class CurrentIndex extends React.Component {
     render() {
       return <div className="kol">
         
-      <div className="column4" style={{background: 'url(../static/back2.png)', backgroundSize: '100% 100%'}}>
+      <div className="column4" style={{background: 'url(../back2.png)', backgroundSize: '100% 100%'}}>
       {/*<h2 className="flex-basis">Текущий Индекс</h2>*/}
           <div className="col1">
               <h3>Текущий Индекс</h3>
@@ -49,7 +49,7 @@ class CurrentIndex extends React.Component {
               flex-basis:100%;
             }
           .column4{
-            background-image: url(./public/static/back2.png);
+            background-image: url(./public/back2.png);
             background-size: 100%;
               display: flex;
               justify-content: space-around;

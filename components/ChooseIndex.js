@@ -33,7 +33,7 @@ class ChooseIndex extends React.Component {
     render() {
       return <div>
         
-        <div className="column3" style={{background: 'url(../static/block2.1.png)', backgroundSize: '100% 100%'}}>
+        <div className="column3" style={{background: 'url(../block2.1.png)', backgroundSize: '100% 100%'}}>
       <h1 className="flex-basis">Выберите Инвестиционный пакет</h1>
           <div className="col1 space">
               <h3>Индекс CTI I - Криптовалюта</h3>
@@ -146,7 +146,7 @@ class ChooseIndex extends React.Component {
             flex-basis:100%;
           }
         .column3{
-          background-image: url(./public/static/block2.1.png);
+          background-image: url(./public/block2.1.png);
           background-size: 100%;
             display: flex;
             justify-content: flex-start;

@@ -18,18 +18,18 @@ export default function Block(){
     return (
         <Container> 
             <div className="state-title">Наши гарантии </div>
-            <div className="state-building"><img src="/static/block8/state-building.png" />
+            <div className="state-building"><img src="/block8/state-building.png" />
             </div>
             <div className="state-cont">
-                <div className="state-type1"><div className="vertical-align"><img src="/static/block8/1.png" /></div><div>Мы являемся официально зарегистрированной компанией с 5-летним стажем работы на рынке.
+                <div className="state-type1"><div className="vertical-align"><img src="/block8/1.png" /></div><div>Мы являемся официально зарегистрированной компанией с 5-летним стажем работы на рынке.
 <br /> <br />За годы существования компания провела огромное количество сделок в разных сферах. </div></div>
                 <div></div>
                 <div></div>
-                <div className="state-type2"><div className="vertical-align"><img src="/static/block8/2.png" /></div><div>Компания Pegas Capital выполнила более 200 крупных инвестиционных проектов и совершила тысячи успешных сделок на крупнейших мировых биржах</div></div>
-                <div className="state-type2"><div className="vertical-align"><img src="/static/block8/3.png" /></div><div>Наша цель — это создание крупнейшей в СНГ финансовой организации с миллионами довольных клиентов.</div></div>
+                <div className="state-type2"><div className="vertical-align"><img src="/block8/2.png" /></div><div>Компания Pegas Capital выполнила более 200 крупных инвестиционных проектов и совершила тысячи успешных сделок на крупнейших мировых биржах</div></div>
+                <div className="state-type2"><div className="vertical-align"><img src="/block8/3.png" /></div><div>Наша цель — это создание крупнейшей в СНГ финансовой организации с миллионами довольных клиентов.</div></div>
                 <div></div>
                 <div></div>
-                <div className="state-type2"><div className="vertical-align"><img src="/static/block8/4.png" /></div><div>Наш доход на прямую зависит от дохода наших инвесторов. Чем больше зарабатываете вы, тем больше зарабатываем мы</div></div>
+                <div className="state-type2"><div className="vertical-align"><img src="/block8/4.png" /></div><div>Наш доход на прямую зависит от дохода наших инвесторов. Чем больше зарабатываете вы, тем больше зарабатываем мы</div></div>
             </div>
             <style jsx>
             {`
