@@ -6,7 +6,7 @@ const cookieParser = require('cookie-parser');
 const mongoose = require('mongoose');
 const { response } = require('express');
 const { Router } = require('next/router');
-
+const cors = require('cors')
 
 const dev = process.env.NODE_ENV !== 'production'; // !==
 const port = process.env.PORT || 3000;
@@ -83,7 +83,7 @@ app.prepare().then(() => {
 
     server.use(express.json());
     server.use(cookieParser(COOKIE_SECRET));
-
+    server.use(cors())
 
 
     const authenticate = async (email, password) => {
