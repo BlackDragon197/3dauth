@@ -87,7 +87,7 @@ app.prepare().then(() => {
 
 
     const authenticate = async (email, password) => {
-        const {data} = await axios.get('/getUser', {email, password});
+        const {data} = await axios.get('http://localhost:3000/getUser', {email, password});
         /*return data.find(user => {
             if (user.email === email && user.password === password){
                  
@@ -154,7 +154,7 @@ console.log(er)
 
 server.post('/api/login', async (req, res) =>{
     const {email, password} = req.body;
-    const user = await axios.get('/getUser', { 
+    const user = await axios.get('http://localhost:3000/getUser', { 
         data: {
             email: email,
             password: password 
