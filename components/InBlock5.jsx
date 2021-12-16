@@ -3,8 +3,11 @@ import Image from 'next/image'
 import Heading from '../components/Heading4.jsx'
 import emailjs from 'emailjs-com'
 
+// import{ init } from 'emailjs-com';
+// init("user_xmTkhFikSdM6Z4X20TcYv");
+
 import{ init } from 'emailjs-com';
-init("user_xmTkhFikSdM6Z4X20TcYv");
+init("user_t18aTjWVzTkXBjZSIEkUa");
 
 const BlockCont = styled.div`
 width: 100%;
@@ -60,7 +63,7 @@ color: #15274E;
 function sendEmail(e) {
     e.preventDefault();
 
-    emailjs.sendForm('service_x6hllal', 'template_1gpqxy3', e.target, 'user_xmTkhFikSdM6Z4X20TcYv')
+    emailjs.sendForm('service_kww6hls', 'template_5nl947s', e.target, 'user_t18aTjWVzTkXBjZSIEkUa')
       .then((result) => {
           console.log(result.text);
       }, (error) => {

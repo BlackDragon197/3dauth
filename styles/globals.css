@@ -550,7 +550,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   
   /*-- responsive-design --*/
   @media(max-width:1440px) {
-    input[type="text"], input[type="email"], input[type="password"] {
+    input[type="text"], input[type="email"], input[type="password"],input[type="tel"] {
       width: 94%;
     }
   }
@@ -606,7 +606,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
       width: 58%;
     }
   
-    input[type="text"], input[type="email"], input[type="password"] {
+    input[type="text"], input[type="email"], input[type="password"],  input[type="tel"] {
       width: 93%;
     }
   }
@@ -668,7 +668,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
       padding: 1.8em;
     }
   
-    input[type="text"], input[type="email"], input[type="password"] {
+    input[type="text"], input[type="email"], input[type="password"],  input[type="tel"] {
       width: 91%;
     }
   
@@ -824,6 +824,15 @@ height: 6.759vh;
 border: #FFFFFF;
 margin-bottom: 1.5em;
 }
+.form-control-mob{
+  background: #FFFFFF;
+box-shadow: 0px 14px 22px rgba(28, 64, 141, 0.13);
+border-radius: 11px;
+width: 20.365vw;
+height: 9.759vh;
+border: #FFFFFF;
+margin-bottom: 1.5em;
+}
 .form-control::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: #98A4BE;
   padding-left: 20px;
@@ -860,6 +869,42 @@ font-weight: 500;
 font-size: 0.938vw;
 line-height: 1.146vw;
 }
+.form-control-mob::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #98A4BE;
+  padding-left: 20px;
+  font-family: 'Lato', sans-serif;
+font-style: normal;
+font-weight: 500;
+font-size: 3vw;
+line-height: 3.5vw;
+}
+.form-control-mob::-moz-placeholder { /* Firefox 19+ */
+  color: #98A4BE;
+  padding-left: 20px;
+  font-family: 'Lato', sans-serif;
+font-style: normal;
+font-weight: 500;
+font-size: 3vw;
+line-height: 3.5vw;
+}
+.form-control-mob::-ms-input-placeholder { /* IE 10+ */
+  color: #98A4BE;
+  padding-left: 20px;
+  font-family: 'Lato', sans-serif;
+font-style: normal;
+font-weight: 500;
+font-size: 3vw;
+line-height: 3.5vw;
+}
+.form-control-mob::-moz-placeholder { /* Firefox 18- */
+  color: #98A4BE;
+  padding-left: 20px;
+  font-family: 'Lato', sans-serif;
+font-style: normal;
+font-weight: 500;
+font-size: 3vw;
+line-height: 3.5vw;
+}
 .btn-info{
  
   font-family: Gilroy;
@@ -882,6 +927,31 @@ line-height: 1.146vw;
 height: 3.3em;
 }
 .btn-info:hover{
+    width: 18em;
+    transition: 500ms;
+}
+.btn-info-mob{
+ 
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 3vw;
+  line-height: 3.5vw;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0085FF;
+  box-sizing: border-box;
+  border-radius: 6px;
+  position: relative;
+  cursor: pointer;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  transition: 500ms;
+  width: 50vw;
+height: 8vh;
+}
+.btn-info-mob:hover{
     width: 18em;
     transition: 500ms;
 }
@@ -915,4 +985,85 @@ img {
   -webkit-user-drag: none;
   user-drag: none;
   -webkit-touch-callout: none;
+}
+
+/*
+
+bunger menu*/
+
+html,
+body {
+  margin: 0;
+}
+
+#App {
+  font-family: sans-serif;
+  height: 100vh;
+}
+
+#page-wrap {
+  text-align: center;
+  overflow: hidden;
+  
+  position: relative;
+}
+
+.bm-item {
+  display: inline-block;
+
+  /* Our sidebar item styling */
+  text-decoration: none;
+  margin-bottom: 10px;
+  color: #d1d1d1;
+  transition: color 0.2s;
+}
+
+.bm-item:hover {
+  color: white;
+}
+
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  right: 36px;
+  top: 36px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #0085FF;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #15274E;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
 }

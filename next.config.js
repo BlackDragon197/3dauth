@@ -5,6 +5,8 @@ module.exports = {
        config.resolve.fallback.net = false;
      }
      return config;
+
+     
    },
 
    async headers() {
@@ -21,4 +23,9 @@ module.exports = {
       }
     ]
 },
+reactStrictMode: true,
+  env: {
+    API: process.env.API,
+  },
  }
+ 

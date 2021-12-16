@@ -78,28 +78,18 @@ const COOKIE_OPTIONS = {
     signed: true
 };
 
+
 app.prepare().then(() => {
     const server = express(); 
+    
+
 
     server.use(express.json());
     server.use(cookieParser(COOKIE_SECRET));
     server.use(cors())
 
 
-    const authenticate = async (email, password) => {
-        const {data} = await axios.get('http://localhost:3000/getUser', {email, password});
-        /*return data.find(user => {
-            if (user.email === email && user.password === password){
-                 
-            }
-        })*/
-        //return data;
-     }
-
-
-     
-
-    server.get('/getUser',  (req, res) => {
+    server.get('/api/getUser',  (req, res) => {
         const emailo = req.body.email
         console.log('here is emailo from get')
         console.log(emailo)
@@ -154,14 +144,21 @@ console.log(er)
 
 server.post('/api/login', async (req, res) =>{
     const {email, password} = req.body;
-    const user = await axios.get('http://localhost:3000/getUser', { 
+    /*const user = await axios.get('http://localhost:3000/getUser', { 
         data: {
             email: email,
             password: password 
         }
         
+    })*/
+    const requestInstance = axios.create({
+        baseURL: process.env.API,
+        headers: {'X-Custom-Header' : 'foobar'}
     })
-    
+    try{
+    const user = await requestInstance({url: 'getUser',data:{email: email, password: password}
+    })
+    console.log('tut kek from server.js ', user)
    if(!user.data){
         return res.status(403).send('Invalid email or password');
     } else if(email == user.data.email){
@@ -176,6 +173,10 @@ server.post('/api/login', async (req, res) =>{
     res.cookie('token', userData, COOKIE_OPTIONS);
     return res.json(userData)
 }
+}catch(e){
+    console.log('errorrr:', e)
+}
+
 });
 
 server.post('/api/logout', (req,res) =>{
@@ -283,33 +284,32 @@ res.json(body)
 //    const data2 = await axios.post(options2.url, {data: options2.body}, options2.headers) 
 // console.log(data2.body)
 
-
-    
 })
 
 server.get('/api/profile', async (req,res) => {
     const { signedCookies = {} } = req;
     const { token } = signedCookies;
     if (token && token.email ){
-        console.log('token is ok')
-        const {data} = await axios.get('http://localhost:3000/getUser', { 
-            data: {
-                email: token.email,
-                password: token.password 
-            }
-        });
+        console.log('token is ok', token.email)
+        // const {data} = await axios.get('http://localhost:3000/getUser', { 
+        //     data: {
+        //         email: token.email,
+        //         password: token.password 
+        //     }
+        // });
         //const userProfile = data.find(user => user.email === token.email);
-        return res.json(/*{user: userProfile}*/data);
+        return res.status(200).json(/*{user: userProfile}*/token);
         
+    }else{
+    res.status(404);//срабатывает этот срипт
     }
-    res.sendStatus(404);//срабатывает этот срипт
 })
 
 server.get('*', (req, res) => {
     return handle(req, res);
 })
 
-    server.listen(port, err =>{
+    server.listen(port, err =>{//port 3000
         if (err) throw err;
         console.log(`Listening on port ${port}`)
     })

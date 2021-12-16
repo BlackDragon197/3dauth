@@ -1,55 +1,29 @@
-import React, { useState, useContext } from 'react'
-import {scaleRotate as Menu} from 'react-burger-menu'
-
-// make a new context
-const MyContext = React.createContext();
-
-// create the provider
-const MyProvider = (props) => {
-  const [menuOpenState, setMenuOpenState] = useState(false)
-  
+import React from "react";
+import { elastic as Menu } from "react-burger-menu";
+import props from 'prop-types';
+export default function MobileMenu () {
   return (
-    <MyContext.Provider value={{
-      isMenuOpen: menuOpenState,
-      toggleMenu: () => setMenuOpenState(!menuOpenState),
-      stateChangeHandler: (newState) => setMenuOpenState(newState.isOpen)
-    }}>
-      {props.children}
-    </MyContext.Provider>
-  )
-}
+    // Pass on our props
+    <Menu {...props} right>
+      <a className="menu-item" href="#invest">
+        Инвестиционные пакеты
+      </a>
 
-// create a button that calls a context function to set a new open state when clicked
-const Button = () => {
-  const ctx = useContext(MyContext)
-  return (
-    <div><button onClick={ctx.toggleMenu}>Toggle menu</button> </div>
-  )
-}
+      <a className="menu-item" href="#faq">
+        Faq
+      </a>
 
-// create a navigation component that wraps the burger menu
-const Navigation = () => {
-  const ctx = useContext(MyContext)
+      <a className="menu-item" href="">
+        Помощь
+      </a>
 
-  return (
-    <Menu 
-      customBurgerIcon={false}
-      isOpen={ctx.isMenuOpen}
-      onStateChange={(state) => ctx.stateChangeHandler(state)}
-    />
-  )
-}
+      <a className="menu-item" href="#contact">
+        Заказать звонок
+      </a>
 
-// default export here
-const MobileMenu = () => {
-  return (
-    <MyProvider>
-      <div>
-        <Button />
-        <Navigation />
-      </div>
-    </MyProvider>
-  )
-}
-
-export default MobileMenu;
+      <a className="menu-item" href="#onas">
+        О Pegas
+      </a>
+    </Menu>
+  );
+};
