@@ -19,7 +19,7 @@ const Layout = ({ title, children, auth }) => {
             
             
             <div className="topdiv1">
-            <span><a href="http://localhost:3000"><Image src={logo} width='110px' height='90px'/></a></span>
+            <span><a href="https://pegascapital.herokuapp.com/"><Image src={logo} width='110px' height='90px'/></a></span>
             </div>
                 {/*<Link href="">
                     <a>Курс биткоина(USD): {btcPrice}</a>
