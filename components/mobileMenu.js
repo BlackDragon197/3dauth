@@ -25,5 +25,5 @@ export default function MobileMenu () {
         О Pegas
       </a>
     </Menu>
-  );
-};
+  )
+}
