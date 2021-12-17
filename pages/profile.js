@@ -12,7 +12,7 @@ export default class Profile extends React.Component{
 
   
 
-    render(){1
+    render(){
         return(
             <Layout title="Мой аккаунт" {...this.props}>
             <CurrentIndex />
