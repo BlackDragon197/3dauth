@@ -88,33 +88,6 @@ app.prepare().then(() => {
     server.use(cookieParser(COOKIE_SECRET));
     server.use(cors())
 
-
-    server.get('/api/getUser',  (req, res) => {
-        const emailo = req.body.email
-        console.log('here is emailo from get')
-        console.log(emailo)
-
-        UserModel.countDocuments({email: emailo}, function (err, count){ 
-            if(count>0){
-                //document exists });
-                UserModel.findOne({'email': emailo})
-                .exec(function (err, user) {
-                if (err) {
-                  console.log(err);
-                  res.send(err)
-                } else {
-                  //res.cookie('token', user/*, COOKIE_OPTIONS*/)
-                  res.json(user);
-                  //console.log(user);
-                }
-              });
-            }
-            else{
-                res.send(null)
-            }
-        }); 
-      });
-
 server.post('/api/reg', async (req, res) =>{
     const {name, email, password, refer} = req.body;
 
