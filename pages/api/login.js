@@ -15,7 +15,7 @@ export default async function handler(req, res) {
     const {email, password} = req.body;
     const requestInstance = axios.create({
         baseURL: process.env.API,
-        headers: {'X-Custom-Header' : 'foobar'}
+        headers: {'Content-Type': 'application/json'}
     })
     try{
     const user = await requestInstance({url: 'getUser',data:{email: email, password: password}
@@ -35,6 +35,7 @@ export default async function handler(req, res) {
     cookies.set('token', userData, COOKIE_OPTIONS);
     var token = cookies.get('token', { signed: true })
     //res.send(token);
+    console.log(token)
     return res.json(userData)
 }
 }catch(e){
