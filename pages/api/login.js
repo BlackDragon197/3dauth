@@ -45,7 +45,7 @@ export default async function handler(req, res) {
 }
       } else if(req.method === 'OPTIONS'){
         // Handle any other HTTP method
-        res.status(200)
+        res.status(200).json({status:"okkk"})
       }
 
     
