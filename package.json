@@ -8,7 +8,7 @@
   },
   "scripts": {
     "build": "next build",
-    "next": "next dev",
+    "next": "next dev"
 
   },
   "author": "",
