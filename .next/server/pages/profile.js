@@ -549,7 +549,7 @@ class ChooseIndex extends external_react_.Component {
           className: "jsx-3758951106" + " " + "col1 space",
           children: [/*#__PURE__*/jsx_runtime_.jsx("h3", {
             className: "jsx-3758951106",
-            children: "\u0418\u043D\u0434\u0435\u043A\u0441 CTI I - \u041A\u0440\u0438\u043F\u0442\u043E\u0432\u0430\u043B\u044E\u0442\u0430"
+            children: "\u0414\u0435\u043F\u043E\u0437\u0438\u0442 \u041A\u0440\u0438\u043F\u0442\u043E"
           }), /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
             className: "jsx-3758951106" + " " + "curIndex space3",
             children: [/*#__PURE__*/jsx_runtime_.jsx("div", {
@@ -595,7 +595,7 @@ class ChooseIndex extends external_react_.Component {
           className: "jsx-3758951106" + " " + "col1 space",
           children: [/*#__PURE__*/jsx_runtime_.jsx("h3", {
             className: "jsx-3758951106",
-            children: "\u0418\u043D\u0434\u0435\u043A\u0441 CTI II - \u0410\u043A\u0446\u0438\u0438"
+            children: "\u0414\u0435\u043F\u043E\u0437\u0438\u0442 \u0410\u043A\u0446\u0438\u0438"
           }), /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
             className: "jsx-3758951106" + " " + "curIndex space3",
             children: [/*#__PURE__*/jsx_runtime_.jsx("div", {
@@ -641,7 +641,7 @@ class ChooseIndex extends external_react_.Component {
           className: "jsx-3758951106" + " " + "col1 space",
           children: [/*#__PURE__*/jsx_runtime_.jsx("h3", {
             className: "jsx-3758951106",
-            children: "\u0418\u043D\u0434\u0435\u043A\u0441 CTI III - \u0417\u043E\u043B\u043E\u0442\u043E"
+            children: "\u0414\u0435\u043F\u043E\u0437\u0438\u0442 - \u0417\u043E\u043B\u043E\u0442\u043E"
           }), /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
             className: "jsx-3758951106" + " " + "curIndex space3",
             children: [/*#__PURE__*/jsx_runtime_.jsx("div", {

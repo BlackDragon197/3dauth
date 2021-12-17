@@ -67,7 +67,7 @@ const Layout = ({
           children: /*#__PURE__*/jsx_runtime_.jsx("span", {
             className: "jsx-1222747367",
             children: /*#__PURE__*/jsx_runtime_.jsx("a", {
-              href: "http://localhost:3000",
+              href: "https://pegascapital.herokuapp.com/",
               className: "jsx-1222747367",
               children: /*#__PURE__*/jsx_runtime_.jsx(next_image["default"], {
                 src: pegas,

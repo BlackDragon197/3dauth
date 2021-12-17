@@ -5,7 +5,7 @@ exports.id = 405;
 exports.ids = [405];
 exports.modules = {
 
-/***/ 7553:
+/***/ 7511:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 // ESM COMPAT FLAG
@@ -1177,10 +1177,13 @@ var AccordionSummary_default = /*#__PURE__*/__webpack_require__.n(AccordionSumma
 ;// CONCATENATED MODULE: external "@mui/material/Typography"
 const Typography_namespaceObject = require("@mui/material/Typography");
 var Typography_default = /*#__PURE__*/__webpack_require__.n(Typography_namespaceObject);
+;// CONCATENATED MODULE: external "@mui/icons-material/ExpandMore"
+const ExpandMore_namespaceObject = require("@mui/icons-material/ExpandMore");
 ;// CONCATENATED MODULE: external "@mui/icons-material/HorizontalRule"
 const HorizontalRule_namespaceObject = require("@mui/icons-material/HorizontalRule");
 var HorizontalRule_default = /*#__PURE__*/__webpack_require__.n(HorizontalRule_namespaceObject);
 ;// CONCATENATED MODULE: ./components/InBlock10.jsx
+
 
 
 
@@ -1862,7 +1865,7 @@ const external_react_burger_menu_namespaceObject = require("react-burger-menu");
 ;// CONCATENATED MODULE: external "prop-types"
 const external_prop_types_namespaceObject = require("prop-types");
 var external_prop_types_default = /*#__PURE__*/__webpack_require__.n(external_prop_types_namespaceObject);
-;// CONCATENATED MODULE: ./components/MobileMenu.js
+;// CONCATENATED MODULE: ./components/mobile/MobileMenu.js
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -1874,7 +1877,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-function MobileMenu() {
+function Mobilenu() {
   return (
     /*#__PURE__*/
     // Pass on our props
@@ -2896,7 +2899,7 @@ function Index(props) {
 
     return /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
       id: "outer-container",
-      children: [/*#__PURE__*/jsx_runtime_.jsx(MobileMenu, {
+      children: [/*#__PURE__*/jsx_runtime_.jsx(Mobilenu, {
         customBurgerIcon: /*#__PURE__*/jsx_runtime_.jsx("img", {
           src: "public/mobile/icon.png"
         }),
@@ -3073,7 +3076,7 @@ module.exports = require("styled-jsx/style");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [400,61,925,752,778], () => (__webpack_exec__(7553)));
+var __webpack_exports__ = __webpack_require__.X(0, [400,61,925,752,778], () => (__webpack_exec__(7511)));
 module.exports = __webpack_exports__;
 
 })();

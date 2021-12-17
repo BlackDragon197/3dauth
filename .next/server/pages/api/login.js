@@ -5,7 +5,14 @@ exports.id = 994;
 exports.ids = [994];
 exports.modules = {
 
-/***/ 6187:
+/***/ 640:
+/***/ ((module) => {
+
+module.exports = require("cookies");
+
+/***/ }),
+
+/***/ 2022:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 // ESM COMPAT FLAG
@@ -19,9 +26,9 @@ __webpack_require__.d(__webpack_exports__, {
 ;// CONCATENATED MODULE: external "axios"
 const external_axios_namespaceObject = require("axios");
 var external_axios_default = /*#__PURE__*/__webpack_require__.n(external_axios_namespaceObject);
-;// CONCATENATED MODULE: external "cookies"
-const external_cookies_namespaceObject = require("cookies");
-var external_cookies_default = /*#__PURE__*/__webpack_require__.n(external_cookies_namespaceObject);
+// EXTERNAL MODULE: external "cookies"
+var external_cookies_ = __webpack_require__(640);
+var external_cookies_default = /*#__PURE__*/__webpack_require__.n(external_cookies_);
 ;// CONCATENATED MODULE: ./pages/api/login.js
 
 
@@ -41,7 +48,7 @@ async function handler(req, res) {
     password
   } = req.body;
   const requestInstance = external_axios_default().create({
-    baseURL: "http://localhost:3000/api/",
+    baseURL: "https://pegascapital.herokuapp.com/api/",
     headers: {
       'X-Custom-Header': 'foobar'
     }
@@ -90,7 +97,7 @@ async function handler(req, res) {
 var __webpack_require__ = require("../../webpack-api-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = (__webpack_exec__(6187));
+var __webpack_exports__ = (__webpack_exec__(2022));
 module.exports = __webpack_exports__;
 
 })();

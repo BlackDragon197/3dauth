@@ -88,11 +88,15 @@ const redirectUser = (res, path) => {
 };
 
 const createUser = async (name, email, password, refer) => {
-  const response = await axios__WEBPACK_IMPORTED_MODULE_0___default().post('/api/reg', {
-    name,
-    email,
-    password,
-    refer
+  //const response = await axios.post('/api/reg', {name, email, password, refer})
+  const response = await instancePost({
+    url: 'reg',
+    data: {
+      name,
+      email,
+      password,
+      refer
+    }
   });
   console.log(response);
 
@@ -103,21 +107,24 @@ const createUser = async (name, email, password, refer) => {
   }
 };
 const instancePost = axios__WEBPACK_IMPORTED_MODULE_0___default().create({
-  baseURL: "http://localhost:3000/api/",
+  baseURL: "https://pegascapital.herokuapp.com/api/",
   method: 'post',
   headers: {
     'X-Custom-Header': 'foobar'
   }
 });
 const loginUser = async (email, password) => {
-  //console.log('APIurl: ',process.env.API)
-  //const{data} = await instancePost({url: 'login', data: {email, password}})
+  console.log('APIurl: ', "https://pegascapital.herokuapp.com/api/");
   const {
     data
-  } = await axios__WEBPACK_IMPORTED_MODULE_0___default().post('http://localhost:3000/api/login', {
-    email,
-    password
-  });
+  } = await instancePost({
+    url: 'login',
+    data: {
+      email,
+      password
+    }
+  }); //const {data} = await axios.post('http://localhost:3000/api/login', { email, password });
+
   console.log('kek');
   console.log(data);
   console.log('kek2');
@@ -126,13 +133,15 @@ const loginUser = async (email, password) => {
 
 };
 const logoutUser = async () => {
-  if (false) {}
+  if (false) {} //await axios.post('/api/logout')
 
-  await axios__WEBPACK_IMPORTED_MODULE_0___default().post('/api/logout');
-  next_router__WEBPACK_IMPORTED_MODULE_1___default().push('/login');
+
+  await instancePost({
+    url: 'logout'
+  }); //Router.push('/login')
 };
 const instanceGet = axios__WEBPACK_IMPORTED_MODULE_0___default().create({
-  baseURL: "http://localhost:3000/api/",
+  baseURL: "https://pegascapital.herokuapp.com/api/",
   headers: {
     'X-Custom-Header': 'foobar'
   }
@@ -149,9 +158,13 @@ const getBtcPrice = async () => {
 };
 const payAdv = async amount => {
   const qiwikam = amount;
-  console.log('eto kiqikam', qiwikam);
-  const qiwi = await axios__WEBPACK_IMPORTED_MODULE_0___default().post('/api/payadv', {
-    qiwikam
+  console.log('eto qiwikam', qiwikam); //const qiwi = await axios.post('/api/payadv', {qiwikam})
+
+  const qiwi = await instancePost({
+    url: 'payadv',
+    data: {
+      qiwikam
+    }
   });
   console.log('eto qiwi', qiwi.data);
   next_router__WEBPACK_IMPORTED_MODULE_1___default().push(qiwi.data.payment_url);
