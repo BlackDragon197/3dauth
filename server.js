@@ -123,14 +123,14 @@ server.post('/api/logout', (req,res) =>{
 })
 
 
-    const crypto = require('crypto')
-    const request = require('request')
+    // const crypto = require('crypto')
+    // const request = require('request')
      
-    const apiKey2 = '3FJLtxjxA6dq6CMwMKhU8TBh4aflv1YgGBdbph1w';
-    const apiSecret2 = 'Y5rXB4CMwtpEeDSDnhM5h3LHYPcgr9f5fn9AGg5I';
+    // const apiKey2 = '3FJLtxjxA6dq6CMwMKhU8TBh4aflv1YgGBdbph1w';
+    // const apiSecret2 = 'Y5rXB4CMwtpEeDSDnhM5h3LHYPcgr9f5fn9AGg5I';
     
-    const apiKey = 'MY7fL7xnAOskifWlwSWaD3NQB3BWzXBxQkrOfxMw';
-    const apiSecret = 'gGFKOPnmyxYIdwBcnFFm4ISHwcd08eFVkcgNtqIK';
+    // const apiKey = 'MY7fL7xnAOskifWlwSWaD3NQB3BWzXBxQkrOfxMw';
+    // const apiSecret = 'gGFKOPnmyxYIdwBcnFFm4ISHwcd08eFVkcgNtqIK';
     
    
 // server.post('/api/payadv' , async(req,res) =>{
@@ -222,33 +222,33 @@ server.post('/api/logout', (req,res) =>{
 //    const data2 = await axios.post(options2.url, {data: options2.body}, options2.headers) 
 // console.log(data2.body)
 
-})
+//})
 
-server.get('/api/profile', async (req,res) => {
-    const { signedCookies = {} } = req;
-    const { token } = signedCookies;
-    if (token && token.email ){
-        console.log('token is ok', token.email)
-        // const {data} = await axios.get('http://localhost:3000/getUser', { 
-        //     data: {
-        //         email: token.email,
-        //         password: token.password 
-        //     }
-        // });
-        //const userProfile = data.find(user => user.email === token.email);
-        return res.status(200).json(/*{user: userProfile}*/token);
+// server.get('/api/profile', async (req,res) => {
+//     const { signedCookies = {} } = req;
+//     const { token } = signedCookies;
+//     if (token && token.email ){
+//         console.log('token is ok', token.email)
+//         // const {data} = await axios.get('http://localhost:3000/getUser', { 
+//         //     data: {
+//         //         email: token.email,
+//         //         password: token.password 
+//         //     }
+//         // });
+//         //const userProfile = data.find(user => user.email === token.email);
+//         return res.status(200).json(/*{user: userProfile}*/token);
         
-    }else{
-    res.status(404);//срабатывает этот срипт
-    }
-})
+//     }else{
+//     res.status(404);//срабатывает этот срипт
+//     }
+// })
 
-server.get('*', (req, res) => {
-    return handle(req, res);
-})
+// server.get('*', (req, res) => {
+//     return handle(req, res);
+// })
 
-    server.listen(port, err =>{//port 3000
-        if (err) throw err;
-        console.log(`Listening on port ${port}`)
-    })
+    // server.listen(port, err =>{//port 3000
+    //     if (err) throw err;
+    //     console.log(`Listening on port ${port}`)
+    // })
 })

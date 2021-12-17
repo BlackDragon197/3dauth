@@ -2,6 +2,7 @@ import Accordion from '@mui/material/Accordion';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import Typography from '@mui/material/Typography';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import * as React from 'react';
 import HorizontalRuleIcon from '@mui/icons-material/HorizontalRule';
 import styled from 'styled-components'
