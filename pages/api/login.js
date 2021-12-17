@@ -12,7 +12,9 @@ export default async function handler(req, res) {
         signed: true
     };
 
-    const {email, password} = req.body;
+    if (req.method === 'POST') {
+        // Process a POST request
+        const {email, password} = req.body;
     const requestInstance = axios.create({
         baseURL: process.env.API,
         headers: {'Content-Type': 'application/json'}
@@ -41,5 +43,11 @@ export default async function handler(req, res) {
 }catch(e){
     console.log('errorrr:', e)
 }
+      } else if(req.method === 'OPTIONS'){
+        // Handle any other HTTP method
+        res.status(200)
+      }
+
+    
    // res.status(200).json({email, password})
   }
