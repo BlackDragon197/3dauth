@@ -115,42 +115,7 @@ console.log(er)
 })
 })
 
-server.post('/api/login', async (req, res) =>{
-    const {email, password} = req.body;
-    /*const user = await axios.get('http://localhost:3000/getUser', { 
-        data: {
-            email: email,
-            password: password 
-        }
-        
-    })*/
-    const requestInstance = axios.create({
-        baseURL: process.env.API,
-        headers: {'X-Custom-Header' : 'foobar'}
-    })
-    try{
-    const user = await requestInstance({url: 'getUser',data:{email: email, password: password}
-    })
-    console.log('tut kek from server.js ', user)
-   if(!user.data){
-        return res.status(403).send('Invalid email or password');
-    } else if(email == user.data.email){
-    const userData = {
-        password: user.data.password,
-        name: user.data.name,
-        email: user.data.email,
-        type: AUTH_USER_TYPE,
-        refer: user.data.refer
-    }
-    //console.log(userData)
-    res.cookie('token', userData, COOKIE_OPTIONS);
-    return res.json(userData)
-}
-}catch(e){
-    console.log('errorrr:', e)
-}
 
-});
 
 server.post('/api/logout', (req,res) =>{
     res.clearCookie('token', COOKIE_OPTIONS)
@@ -168,80 +133,80 @@ server.post('/api/logout', (req,res) =>{
     const apiSecret = 'gGFKOPnmyxYIdwBcnFFm4ISHwcd08eFVkcgNtqIK';
     
    
-server.post('/api/payadv' , async(req,res) =>{
-const {qiwikam} = req.body
-console.log(req.body)
-const apiPath = '/v3/auth/deposit';
-const nonce = Date.now().toString()
-const body = {
-    'currency': 'rub',
-    'amount': qiwikam,
-    'payment_service': 'default'
-  }
-let signature = `${apiPath}${nonce}${JSON.stringify(body)}`
+// server.post('/api/payadv' , async(req,res) =>{
+// const {qiwikam} = req.body
+// console.log(req.body)
+// const apiPath = '/v3/auth/deposit';
+// const nonce = Date.now().toString()
+// const body = {
+//     'currency': 'rub',
+//     'amount': qiwikam,
+//     'payment_service': 'default'
+//   }
+// let signature = `${apiPath}${nonce}${JSON.stringify(body)}`
  
-const sig = crypto.createHmac('sha384', apiSecret).update(signature)
-const shex = sig.digest('hex')
+// const sig = crypto.createHmac('sha384', apiSecret).update(signature)
+// const shex = sig.digest('hex')
 
- const options = {
-      url: `https://api.kuna.io${apiPath}`,
-      headers: {
-        'kun-nonce': nonce,
-        'kun-apikey': apiKey,
-        'kun-signature': shex
-      },
-      body: body,
-      json: true
-    }
-let id ;
- request.post(options, async (error, response, body) => {
-    console.log(body);
-    //console.log(response);
-    console.log(error);
-    id = await body.deposit_id;
-    console.log('это ид: ',id)
-    console.log(qiwikam)
-res.json(body)
-    // const apiPath2 = '/public-api/payment-invoices';
-    // const nonce2 = Date.now().toString()
+//  const options = {
+//       url: `https://api.kuna.io${apiPath}`,
+//       headers: {
+//         'kun-nonce': nonce,
+//         'kun-apikey': apiKey,
+//         'kun-signature': shex
+//       },
+//       body: body,
+//       json: true
+//     }
+// let id ;
+//  request.post(options, async (error, response, body) => {
+//     console.log(body);
+//     //console.log(response);
+//     console.log(error);
+//     id = await body.deposit_id;
+//     console.log('это ид: ',id)
+//     console.log(qiwikam)
+// res.json(body)
+//     // const apiPath2 = '/public-api/payment-invoices';
+//     // const nonce2 = Date.now().toString()
   
   
-    // const body2 = {
-    //     "public_key": "rub public key",
-    //     "reference_id": id,    
-    //     "description": "string",
-    //     "service": "qiwi_rub_hpp",      
+//     // const body2 = {
+//     //     "public_key": "rub public key",
+//     //     "reference_id": id,    
+//     //     "description": "string",
+//     //     "service": "qiwi_rub_hpp",      
       
-    //     "service_fields": {
-    //       "phone": "+380953230576"
-    //     },
-    //     "currency": "rub",
-    //     "amount": qiwikam
-    // }  
+//     //     "service_fields": {
+//     //       "phone": "+380953230576"
+//     //     },
+//     //     "currency": "rub",
+//     //     "amount": qiwikam
+//     // }  
   
-    // let signature2 = `${apiPath2}${nonce2}${JSON.stringify(body2)}`
+//     // let signature2 = `${apiPath2}${nonce2}${JSON.stringify(body2)}`
      
-    // const sig2 = crypto.createHmac('sha384', apiSecret).update(signature2)
-    // const shex2 = sig2.digest('hex')
-    // const options2 = {
-    //         url: `https://paygate.kuna.io${apiPath2}`,
-    //         headers: {
-    //           'kun-nonce': nonce,
-    //           'kun-apikey': apiKey,
-    //           'kun-signature': shex
-    //         },
-    //         body: body2,
-    //         json: true
-    //       }
-    //       console.log(options2.headers)
-    //       request.post(options2, async (error, response, body) => {
-    //         console.log(body);
-    //         //console.log(response);
-    //        // console.log('kek');
-    //         //console.log(error);
-    //       })
+//     // const sig2 = crypto.createHmac('sha384', apiSecret).update(signature2)
+//     // const shex2 = sig2.digest('hex')
+//     // const options2 = {
+//     //         url: `https://paygate.kuna.io${apiPath2}`,
+//     //         headers: {
+//     //           'kun-nonce': nonce,
+//     //           'kun-apikey': apiKey,
+//     //           'kun-signature': shex
+//     //         },
+//     //         body: body2,
+//     //         json: true
+//     //       }
+//     //       console.log(options2.headers)
+//     //       request.post(options2, async (error, response, body) => {
+//     //         console.log(body);
+//     //         //console.log(response);
+//     //        // console.log('kek');
+//     //         //console.log(error);
+//     //       })
 
-  })
+//   })
 
 //   const data = await axios.post(options.url, {data: options.data, headers: options.headers}) 
 // const id = data.data.deposit_id
