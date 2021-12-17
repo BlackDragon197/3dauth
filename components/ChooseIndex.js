@@ -36,7 +36,7 @@ class ChooseIndex extends React.Component {
         <div className="column3" style={{background: 'url(../block2.1.png)', backgroundSize: '100% 100%'}}>
       <h1 className="flex-basis">Выберите Инвестиционный пакет</h1>
           <div className="col1 space">
-              <h3>Индекс CTI I - Криптовалюта</h3>
+              <h3>Депозит Крипто</h3>
               <div className="curIndex space3">
                     <div className="text70">
                         <h4>Минимальный депозит:</h4>
@@ -58,7 +58,7 @@ class ChooseIndex extends React.Component {
               </div>
           </div>
           <div className="col1 space">
-          <h3>Индекс CTI II - Акции</h3>
+          <h3>Депозит Акции</h3>
               <div className="curIndex space3">
                     <div className="text70">
                         <h4>Минимальный депозит:</h4>
@@ -80,7 +80,7 @@ class ChooseIndex extends React.Component {
               </div>
           </div>
           <div className="col1 space">
-          <h3>Индекс CTI III - Золото</h3>
+          <h3>Депозит - Золото</h3>
           <div className="curIndex space3">
                     <div className="text70">
                         <h4>Минимальный депозит:</h4>
