@@ -27,5 +27,13 @@ reactStrictMode: true,
   env: {
     API: process.env.API,
   },
+  async rewrites() {
+    return [
+      {
+        source: '/api/:path',
+        destination: 'https://pegascapital.herokuapp.com/:path',
+      },
+    ]
+  },
  }
  
