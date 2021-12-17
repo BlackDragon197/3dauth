@@ -18,7 +18,7 @@ import React, { useEffect }  from "react";
 import DynamicWidth from '../components/DynamicWidth'
 import useDeviceSize from "../components/DynamicWidth";
 import {scaleRotate as Menu} from 'react-burger-menu'
-import MobileMenu from "../components/MobileMenu";
+import MobileMenu from "../components/MobileMenu.js";
 import Mob1 from "../components/mobile/Mob1"
 import Mob2 from "../components/mobile/Mob2"
 import Mob3 from "../components/mobile/Mob3.jsx"
