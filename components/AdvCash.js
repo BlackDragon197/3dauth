@@ -47,7 +47,7 @@ renderComponent(){
       {/*<h1>Привет, {this.props.name} {this.props.index} 
       AdvCash {this.state.index}
       </h1>*/}
-      <h3>Выбранный Индекс: {this.renderComponent()}</h3>
+      <h3>Выбранный Депозит: {this.renderComponent()}</h3>
 
           <div className="column3">
             <h1 className="flex-basis">Выберите способ оплаты</h1>

@@ -36,7 +36,7 @@ class ChooseIndex extends React.Component {
         <div className="column3" style={{background: 'url(../block2.1.png)', backgroundSize: '100% 100%'}}>
       <h1 className="flex-basis">Выберите Инвестиционный пакет</h1>
           <div className="col1 space">
-              <h3>Депозит Крипто</h3>
+              <h3>Депозит CTD</h3>
               <div className="curIndex space3">
                     <div className="text70">
                         <h4>Минимальный депозит:</h4>
@@ -54,11 +54,11 @@ class ChooseIndex extends React.Component {
                     </div>
               </div>
               <div className="space3">
-              <AddBtn width="16.667vw" background="#15274E" onClick={() => {this.props.showComponent('AdvCash'), this.props.index(1)} }>Выбрать Индекс </AddBtn>
+              <AddBtn width="16.667vw" background="#15274E" onClick={() => {this.props.showComponent('AdvCash'), this.props.index(1)} }>Выбрать депозит </AddBtn>
               </div>
           </div>
           <div className="col1 space">
-          <h3>Депозит Акции</h3>
+          <h3>Депозит STD</h3>
               <div className="curIndex space3">
                     <div className="text70">
                         <h4>Минимальный депозит:</h4>
@@ -76,11 +76,11 @@ class ChooseIndex extends React.Component {
                     </div>
               </div>
               <div className="space3">
-              <AddBtn width="16.667vw" background="#15274E"  onClick={() => {this.props.showComponent('AdvCash'), this.props.index(2)} }>Выбрать Индекс </AddBtn>
+              <AddBtn width="16.667vw" background="#15274E"  onClick={() => {this.props.showComponent('AdvCash'), this.props.index(2)} }>Выбрать депозит </AddBtn>
               </div>
           </div>
           <div className="col1 space">
-          <h3>Депозит - Золото</h3>
+          <h3>Депозит GTD</h3>
           <div className="curIndex space3">
                     <div className="text70">
                         <h4>Минимальный депозит:</h4>
@@ -98,7 +98,7 @@ class ChooseIndex extends React.Component {
                     </div>
               </div>
               <div className="space3">
-              <AddBtn width="16.667vw" background="#15274E" onClick={() => {this.props.showComponent('AdvCash'), this.props.index(3)} }>Выбрать Индекс </AddBtn>
+              <AddBtn width="16.667vw" background="#15274E" onClick={() => {this.props.showComponent('AdvCash'), this.props.index(3)} }>Выбрать депозит </AddBtn>
               </div>
               
           </div>
