@@ -58,21 +58,21 @@ export default function Block(){
                         <div className="stock-imgbox imgbox3">
                             <img src="/block9/3.png"/>
                         </div>
-                        <div className="stock-textbox"><span>Достигните ранга старшего менеджера</span> и получайте бонус от депозита приведённого вами пользователя 13% и автомобиль 
+                        <div className="stock-textbox"><span>Получайте бонус</span> от депозита приведённого вами пользователя 13% и автомобиль 
                         </div>
                     </div>
                     <div>
                         <div className="stock-imgbox imgbox4">
                             <img src="/block9/4.png"/>
                         </div>
-                        <div className="stock-textbox"><span>Достигните ранга ведущего менеджера</span> и получайте бонус от депозита приведённого вами пользователя 15% и квартиру 
+                        <div className="stock-textbox"><span>Получайте бонус от депозита</span> приведённого вами пользователя 15% и квартиру 
                         </div>
                     </div>
                     <div>
                         <div className="stock-imgbox imgbox4">
                             <img src="/block9/5.png"/>
                         </div>
-                        <div className="stock-textbox"><span>Достигните ранга ведущего менеджера</span> и получайте бонус от депозита приведённого вами пользователя 15% и квартиру 
+                        <div className="stock-textbox"><span>Получайте бонус от депозита</span> приведённого вами пользователя 17% и дом 
                         </div>
                     </div>
                     <div></div>
