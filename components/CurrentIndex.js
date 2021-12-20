@@ -7,7 +7,7 @@ class CurrentIndex extends React.Component {
       <div className="column4" style={{background: 'url(../back2.png)', backgroundSize: '100% 100%'}}>
       {/*<h2 className="flex-basis">Текущий Индекс</h2>*/}
           <div className="col1">
-              <h3>Текущий Индекс</h3>
+              <h3>Текущий Депозит</h3>
               <div className="curIndex"><h3>
                 Не выбран</h3>
               </div>

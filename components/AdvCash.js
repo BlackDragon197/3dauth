@@ -32,11 +32,11 @@ renderPayment(){
 renderComponent(){
   switch(this.state.index) {
   case 1:
-    return (' Индекс I - Криптовалюта')
+    return (' Депозит CTD')
   case 2:
-    return  ('Индекс II - Акции') 
+    return  ('Депозит STD') 
   case 3:
-    return  ('Индекс III - Золото ')
+    return  ('Депозит GTD')
 }
 }
 

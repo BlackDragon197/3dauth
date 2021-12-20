@@ -52,7 +52,7 @@ renderName(){
                       <li>
                           <button className="leftbut" onClick={() => {this.showComponent('PaymentComponent'), this.showName('PaymentComponent')}}>
                               <a className="lefta">
-                              Выбрать Индекс
+                              Выбрать депозит
                               </a>
                           </button>
                       </li>
@@ -66,7 +66,7 @@ renderName(){
                       <li>
                           <button className="leftbut" onClick={() => {this.showComponent('ReferalComponent'), this.showName('ReferalComponent')}}>
                               <a className="lefta">
-                              Рефералка
+                              Реферальная программа
                               </a>
                           </button>
                       </li>
