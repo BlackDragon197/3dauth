@@ -1,57 +1,45 @@
 "use strict";
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
 (() => {
 var exports = {};
-exports.id = 354;
-exports.ids = [354];
+exports.id = "pages/api/reg";
+exports.ids = ["pages/api/reg"];
 exports.modules = {
 
-/***/ 1185:
+/***/ "mongoose":
+/*!***************************!*\
+  !*** external "mongoose" ***!
+  \***************************/
 /***/ ((module) => {
 
 module.exports = require("mongoose");
 
 /***/ }),
 
-/***/ 1691:
+/***/ "./pages/api/reg.js":
+/*!**************************!*\
+  !*** ./pages/api/reg.js ***!
+  \**************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ reg)
-/* harmony export */ });
-/* harmony import */ var _utils_UserModel__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7036);
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ reg)\n/* harmony export */ });\n/* harmony import */ var _utils_UserModel__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../utils/UserModel */ \"./utils/UserModel.js\");\n\nasync function reg(req, res) {\n  if (req.method === 'POST') {\n    const {\n      name,\n      email,\n      password,\n      refer\n    } = req.body;\n    _utils_UserModel__WEBPACK_IMPORTED_MODULE_0__.UserModel.countDocuments({\n      email: email\n    }, async function (err, count) {\n      if (count > 0) {\n        res.json(null);\n      } else {\n        const doc = new _utils_UserModel__WEBPACK_IMPORTED_MODULE_0__.UserModel({\n          name: name,\n          email: email,\n          password: password,\n          refer: refer\n        }); //const mem = await doc.save()\n        //doc.save()\n\n        try {\n          const mem = await doc.save();\n          res.json(mem);\n        } catch (er) {\n          console.log(er);\n        }\n      }\n    });\n  } else if (req.method === 'OPTIONS') {\n    // Handle any other HTTP method\n    res.status(200).json({\n      status: \"okkk\"\n    });\n  }\n}//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9wYWdlcy9hcGkvcmVnLmpzLmpzIiwibWFwcGluZ3MiOiI7Ozs7O0FBQUE7QUFHZSxlQUFlQyxHQUFmLENBQW1CQyxHQUFuQixFQUF3QkMsR0FBeEIsRUFBNkI7QUFFeEMsTUFBR0QsR0FBRyxDQUFDRSxNQUFKLEtBQWUsTUFBbEIsRUFDQTtBQUNJLFVBQU07QUFBQ0MsTUFBQUEsSUFBRDtBQUFPQyxNQUFBQSxLQUFQO0FBQWNDLE1BQUFBLFFBQWQ7QUFBd0JDLE1BQUFBO0FBQXhCLFFBQWlDTixHQUFHLENBQUNPLElBQTNDO0FBRUFULElBQUFBLHNFQUFBLENBQXlCO0FBQUNNLE1BQUFBLEtBQUssRUFBRUE7QUFBUixLQUF6QixFQUF5QyxnQkFBZ0JLLEdBQWhCLEVBQXFCQyxLQUFyQixFQUE0QjtBQUNqRSxVQUFHQSxLQUFLLEdBQUMsQ0FBVCxFQUNBO0FBQ0lULFFBQUFBLEdBQUcsQ0FBQ1UsSUFBSixDQUFTLElBQVQ7QUFDSCxPQUhELE1BS0E7QUFDSSxjQUFNQyxHQUFHLEdBQUcsSUFBSWQsdURBQUosQ0FBYztBQUN0QkssVUFBQUEsSUFBSSxFQUFFQSxJQURnQjtBQUV0QkMsVUFBQUEsS0FBSyxFQUFFQSxLQUZlO0FBR3RCQyxVQUFBQSxRQUFRLEVBQUVBLFFBSFk7QUFJdEJDLFVBQUFBLEtBQUssRUFBRUE7QUFKZSxTQUFkLENBQVosQ0FESixDQU9RO0FBQ0E7O0FBQ0osWUFDSTtBQUNBLGdCQUFNTyxHQUFHLEdBQUcsTUFBTUQsR0FBRyxDQUFDRSxJQUFKLEVBQWxCO0FBQ0FiLFVBQUFBLEdBQUcsQ0FBQ1UsSUFBSixDQUFTRSxHQUFUO0FBQ0MsU0FKTCxDQUtBLE9BQU1FLEVBQU4sRUFDQTtBQUNRQyxVQUFBQSxPQUFPLENBQUNDLEdBQVIsQ0FBWUYsRUFBWjtBQUNQO0FBR0o7QUFDSixLQTNCRDtBQTRCSCxHQWhDRCxNQWlDSyxJQUFHZixHQUFHLENBQUNFLE1BQUosS0FBZSxTQUFsQixFQUE0QjtBQUM3QjtBQUNBRCxJQUFBQSxHQUFHLENBQUNpQixNQUFKLENBQVcsR0FBWCxFQUFnQlAsSUFBaEIsQ0FBcUI7QUFBQ08sTUFBQUEsTUFBTSxFQUFDO0FBQVIsS0FBckI7QUFDRDtBQUVOIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vM2RhdXRoLy4vcGFnZXMvYXBpL3JlZy5qcz80MDI1Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IFVzZXJNb2RlbCB9IGZyb20gXCIuLi8uLi91dGlscy9Vc2VyTW9kZWxcIlxyXG5cclxuXHJcbmV4cG9ydCBkZWZhdWx0IGFzeW5jIGZ1bmN0aW9uIHJlZyhyZXEsIHJlcykge1xyXG5cclxuICAgIGlmKHJlcS5tZXRob2QgPT09ICdQT1NUJylcclxuICAgIHtcclxuICAgICAgICBjb25zdCB7bmFtZSwgZW1haWwsIHBhc3N3b3JkLCByZWZlcn0gPSByZXEuYm9keTtcclxuICAgICAgICBcclxuICAgICAgICBVc2VyTW9kZWwuY291bnREb2N1bWVudHMoe2VtYWlsOiBlbWFpbH0sIGFzeW5jIGZ1bmN0aW9uIChlcnIsIGNvdW50KSB7IFxyXG4gICAgICAgICAgICBpZihjb3VudD4wKVxyXG4gICAgICAgICAgICB7XHJcbiAgICAgICAgICAgICAgICByZXMuanNvbihudWxsKVxyXG4gICAgICAgICAgICB9XHJcbiAgICAgICAgICAgIGVsc2VcclxuICAgICAgICAgICAge1xyXG4gICAgICAgICAgICAgICAgY29uc3QgZG9jID0gbmV3IFVzZXJNb2RlbCh7XHJcbiAgICAgICAgICAgICAgICAgICAgbmFtZTogbmFtZSxcclxuICAgICAgICAgICAgICAgICAgICBlbWFpbDogZW1haWwsXHJcbiAgICAgICAgICAgICAgICAgICAgcGFzc3dvcmQ6IHBhc3N3b3JkLFxyXG4gICAgICAgICAgICAgICAgICAgIHJlZmVyOiByZWZlclxyXG4gICAgICAgICAgICAgICAgfSlcclxuICAgICAgICAgICAgICAgICAgICAvL2NvbnN0IG1lbSA9IGF3YWl0IGRvYy5zYXZlKClcclxuICAgICAgICAgICAgICAgICAgICAvL2RvYy5zYXZlKClcclxuICAgICAgICAgICAgICAgIHRyeVxyXG4gICAgICAgICAgICAgICAgICAgIHtcclxuICAgICAgICAgICAgICAgICAgICBjb25zdCBtZW0gPSBhd2FpdCBkb2Muc2F2ZSgpXHJcbiAgICAgICAgICAgICAgICAgICAgcmVzLmpzb24obWVtKVxyXG4gICAgICAgICAgICAgICAgICAgIH1cclxuICAgICAgICAgICAgICAgIGNhdGNoKGVyKVxyXG4gICAgICAgICAgICAgICAge1xyXG4gICAgICAgICAgICAgICAgICAgICAgICBjb25zb2xlLmxvZyhlcilcclxuICAgICAgICAgICAgICAgIH1cclxuXHJcbiAgICAgICAgICAgICAgICBcclxuICAgICAgICAgICAgfVxyXG4gICAgICAgIH0pXHJcbiAgICB9XHJcbiAgICBlbHNlIGlmKHJlcS5tZXRob2QgPT09ICdPUFRJT05TJyl7XHJcbiAgICAgICAgLy8gSGFuZGxlIGFueSBvdGhlciBIVFRQIG1ldGhvZFxyXG4gICAgICAgIHJlcy5zdGF0dXMoMjAwKS5qc29uKHtzdGF0dXM6XCJva2trXCJ9KVxyXG4gICAgICB9XHJcblxyXG59Il0sIm5hbWVzIjpbIlVzZXJNb2RlbCIsInJlZyIsInJlcSIsInJlcyIsIm1ldGhvZCIsIm5hbWUiLCJlbWFpbCIsInBhc3N3b3JkIiwicmVmZXIiLCJib2R5IiwiY291bnREb2N1bWVudHMiLCJlcnIiLCJjb3VudCIsImpzb24iLCJkb2MiLCJtZW0iLCJzYXZlIiwiZXIiLCJjb25zb2xlIiwibG9nIiwic3RhdHVzIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./pages/api/reg.js\n");
 
-function reg(req, res) {
-  const {
-    name,
-    email,
-    password,
-    refer
-  } = req.body;
-  _utils_UserModel__WEBPACK_IMPORTED_MODULE_0__/* .UserModel.countDocuments */ .T.countDocuments({
-    email: email
-  }, async function (err, count) {
-    if (count > 0) {
-      res.json(null);
-    } else {
-      const doc = new _utils_UserModel__WEBPACK_IMPORTED_MODULE_0__/* .UserModel */ .T({
-        name: name,
-        email: email,
-        password: password,
-        refer: refer
-      });
-      const mem = await doc.save(); //doc.save()
+/***/ }),
 
-      try {
-        const mem = await doc.save();
-      } catch (er) {
-        console.log(er);
-      }
+/***/ "./utils/UserModel.js":
+/*!****************************!*\
+  !*** ./utils/UserModel.js ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-      res.json(mem);
-    }
-  });
-}
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"UserModel\": () => (/* binding */ UserModel)\n/* harmony export */ });\nconst mongoose = __webpack_require__(/*! mongoose */ \"mongoose\");\n\nconst {\n  Schema\n} = mongoose;\nmongoose.connect('mongodb+srv://1streact:1streact@cluster0.gc5rj.mongodb.net/mytable?retryWrites=true&w=majority'); //mongoose.connect('mongodb://1streact:1streact@cluster0-shard-00-00.gc5rj.mongodb.net:27017,cluster0-shard-00-01.gc5rj.mongodb.net:27017,cluster0-shard-00-02.gc5rj.mongodb.net:27017/mytable?ssl=true&replicaSet=atlas-z8u3u0-shard-0&authSource=admin&retryWrites=true&w=majority')\n\nconst Schem = new Schema({\n  name: String,\n  email: {\n    type: String,\n    unique: true,\n    required: true,\n    dropDups: true\n  },\n  password: String,\n  refer: String,\n  date: {\n    type: Date,\n    default: Date.now\n  }\n});\n\nclass UserClass {\n  get userName() {}\n\n  get userEmail() {}\n\n  set userName(name) {\n    this.name = name;\n  }\n\n  set userEmail(email) {\n    this.email = email;\n  }\n\n  set userPassword(password) {\n    this.password = password;\n  }\n\n  set ref(refer) {\n    this.refer = refer;\n  }\n\n  static findByEmail(email) {\n    return this.findOne({\n      email\n    });\n  }\n\n}\n\nSchem.loadClass(UserClass);\nconst UserModel = mongoose.models.UserModel || mongoose.model('UserModel', Schem);//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi91dGlscy9Vc2VyTW9kZWwuanMuanMiLCJtYXBwaW5ncyI6Ijs7OztBQUFBLE1BQU1BLFFBQVEsR0FBR0MsbUJBQU8sQ0FBQywwQkFBRCxDQUF4Qjs7QUFFQSxNQUFNO0FBQUVDLEVBQUFBO0FBQUYsSUFBYUYsUUFBbkI7QUFFQUEsUUFBUSxDQUFDRyxPQUFULENBQWlCLGdHQUFqQixHQUVBOztBQUVBLE1BQU1DLEtBQUssR0FBRyxJQUFJRixNQUFKLENBQVc7QUFDckJHLEVBQUFBLElBQUksRUFBRUMsTUFEZTtBQUVyQkMsRUFBQUEsS0FBSyxFQUFFO0FBQUVDLElBQUFBLElBQUksRUFBR0YsTUFBVDtBQUFrQkcsSUFBQUEsTUFBTSxFQUFHLElBQTNCO0FBQWlDQyxJQUFBQSxRQUFRLEVBQUcsSUFBNUM7QUFBa0RDLElBQUFBLFFBQVEsRUFBRTtBQUE1RCxHQUZjO0FBR3JCQyxFQUFBQSxRQUFRLEVBQUVOLE1BSFc7QUFJckJPLEVBQUFBLEtBQUssRUFBRVAsTUFKYztBQUtyQlEsRUFBQUEsSUFBSSxFQUFFO0FBQUVOLElBQUFBLElBQUksRUFBRU8sSUFBUjtBQUFjQyxJQUFBQSxPQUFPLEVBQUVELElBQUksQ0FBQ0U7QUFBNUI7QUFMZSxDQUFYLENBQWQ7O0FBUUEsTUFBTUMsU0FBTixDQUFnQjtBQUNBLE1BQVJDLFFBQVEsR0FBRSxDQUViOztBQUVZLE1BQVRDLFNBQVMsR0FBRSxDQUVkOztBQUVXLE1BQVJELFFBQVEsQ0FBQ2QsSUFBRCxFQUFNO0FBQ2QsU0FBS0EsSUFBTCxHQUFZQSxJQUFaO0FBQ0g7O0FBQ1ksTUFBVGUsU0FBUyxDQUFDYixLQUFELEVBQU87QUFDaEIsU0FBS0EsS0FBTCxHQUFhQSxLQUFiO0FBQ0g7O0FBQ2UsTUFBWmMsWUFBWSxDQUFDVCxRQUFELEVBQVU7QUFDdEIsU0FBS0EsUUFBTCxHQUFnQkEsUUFBaEI7QUFDSDs7QUFDTSxNQUFIVSxHQUFHLENBQUNULEtBQUQsRUFBTztBQUNWLFNBQUtBLEtBQUwsR0FBYUEsS0FBYjtBQUNIOztBQUVpQixTQUFYVSxXQUFXLENBQUNoQixLQUFELEVBQU87QUFDekIsV0FBTyxLQUFLaUIsT0FBTCxDQUFhO0FBQUNqQixNQUFBQTtBQUFELEtBQWIsQ0FBUDtBQUNIOztBQXhCZTs7QUEyQmhCSCxLQUFLLENBQUNxQixTQUFOLENBQWdCUCxTQUFoQjtBQUVPLE1BQU1RLFNBQVMsR0FBRzFCLFFBQVEsQ0FBQzJCLE1BQVQsQ0FBZ0JELFNBQWhCLElBQTZCMUIsUUFBUSxDQUFDNEIsS0FBVCxDQUFlLFdBQWYsRUFBNEJ4QixLQUE1QixDQUEvQyIsInNvdXJjZXMiOlsid2VicGFjazovLzNkYXV0aC8uL3V0aWxzL1VzZXJNb2RlbC5qcz9mZmNmIl0sInNvdXJjZXNDb250ZW50IjpbImNvbnN0IG1vbmdvb3NlID0gcmVxdWlyZSgnbW9uZ29vc2UnKTtcclxuXHJcbmNvbnN0IHsgU2NoZW1hIH0gPSBtb25nb29zZTtcclxuXHJcbm1vbmdvb3NlLmNvbm5lY3QoJ21vbmdvZGIrc3J2Oi8vMXN0cmVhY3Q6MXN0cmVhY3RAY2x1c3RlcjAuZ2M1cmoubW9uZ29kYi5uZXQvbXl0YWJsZT9yZXRyeVdyaXRlcz10cnVlJnc9bWFqb3JpdHknKTtcclxuXHJcbi8vbW9uZ29vc2UuY29ubmVjdCgnbW9uZ29kYjovLzFzdHJlYWN0OjFzdHJlYWN0QGNsdXN0ZXIwLXNoYXJkLTAwLTAwLmdjNXJqLm1vbmdvZGIubmV0OjI3MDE3LGNsdXN0ZXIwLXNoYXJkLTAwLTAxLmdjNXJqLm1vbmdvZGIubmV0OjI3MDE3LGNsdXN0ZXIwLXNoYXJkLTAwLTAyLmdjNXJqLm1vbmdvZGIubmV0OjI3MDE3L215dGFibGU/c3NsPXRydWUmcmVwbGljYVNldD1hdGxhcy16OHUzdTAtc2hhcmQtMCZhdXRoU291cmNlPWFkbWluJnJldHJ5V3JpdGVzPXRydWUmdz1tYWpvcml0eScpXHJcblxyXG5jb25zdCBTY2hlbSA9IG5ldyBTY2hlbWEoe1xyXG4gICAgbmFtZTogU3RyaW5nLFxyXG4gICAgZW1haWw6IHsgdHlwZSA6IFN0cmluZyAsIHVuaXF1ZSA6IHRydWUsIHJlcXVpcmVkIDogdHJ1ZSwgZHJvcER1cHM6IHRydWUgfSxcclxuICAgIHBhc3N3b3JkOiBTdHJpbmcsXHJcbiAgICByZWZlcjogU3RyaW5nLFxyXG4gICAgZGF0ZTogeyB0eXBlOiBEYXRlLCBkZWZhdWx0OiBEYXRlLm5vdyB9XHJcbn0pXHJcblxyXG5jbGFzcyBVc2VyQ2xhc3Mge1xyXG4gICAgZ2V0IHVzZXJOYW1lKCl7XHJcblxyXG4gICAgfVxyXG5cclxuICAgIGdldCB1c2VyRW1haWwoKXtcclxuXHJcbiAgICB9XHJcblxyXG4gICAgc2V0IHVzZXJOYW1lKG5hbWUpe1xyXG4gICAgICAgIHRoaXMubmFtZSA9IG5hbWU7XHJcbiAgICB9XHJcbiAgICBzZXQgdXNlckVtYWlsKGVtYWlsKXtcclxuICAgICAgICB0aGlzLmVtYWlsID0gZW1haWw7XHJcbiAgICB9XHJcbiAgICBzZXQgdXNlclBhc3N3b3JkKHBhc3N3b3JkKXtcclxuICAgICAgICB0aGlzLnBhc3N3b3JkID0gcGFzc3dvcmQ7XHJcbiAgICB9XHJcbiAgICBzZXQgcmVmKHJlZmVyKXtcclxuICAgICAgICB0aGlzLnJlZmVyID0gcmVmZXI7XHJcbiAgICB9XHJcblxyXG4gICAgc3RhdGljIGZpbmRCeUVtYWlsKGVtYWlsKXtcclxuICAgIHJldHVybiB0aGlzLmZpbmRPbmUoe2VtYWlsfSlcclxufVxyXG59XHJcblxyXG5TY2hlbS5sb2FkQ2xhc3MoVXNlckNsYXNzKTtcclxuXHJcbmV4cG9ydCBjb25zdCBVc2VyTW9kZWwgPSBtb25nb29zZS5tb2RlbHMuVXNlck1vZGVsIHx8IG1vbmdvb3NlLm1vZGVsKCdVc2VyTW9kZWwnLCBTY2hlbSk7Il0sIm5hbWVzIjpbIm1vbmdvb3NlIiwicmVxdWlyZSIsIlNjaGVtYSIsImNvbm5lY3QiLCJTY2hlbSIsIm5hbWUiLCJTdHJpbmciLCJlbWFpbCIsInR5cGUiLCJ1bmlxdWUiLCJyZXF1aXJlZCIsImRyb3BEdXBzIiwicGFzc3dvcmQiLCJyZWZlciIsImRhdGUiLCJEYXRlIiwiZGVmYXVsdCIsIm5vdyIsIlVzZXJDbGFzcyIsInVzZXJOYW1lIiwidXNlckVtYWlsIiwidXNlclBhc3N3b3JkIiwicmVmIiwiZmluZEJ5RW1haWwiLCJmaW5kT25lIiwibG9hZENsYXNzIiwiVXNlck1vZGVsIiwibW9kZWxzIiwibW9kZWwiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./utils/UserModel.js\n");
 
 /***/ })
 
@@ -62,7 +50,7 @@ function reg(req, res) {
 var __webpack_require__ = require("../../webpack-api-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [36], () => (__webpack_exec__(1691)));
+var __webpack_exports__ = (__webpack_exec__("./pages/api/reg.js"));
 module.exports = __webpack_exports__;
 
 })();

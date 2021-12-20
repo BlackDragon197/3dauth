@@ -2,6 +2,7 @@ import Router from "next/router";
 import * as React from "react";
 import { loginUser, createUser, getUserProfile, authInitialProps} from "../lib/auth";
 import api from "../lib/api"
+import { useRouter } from "next/router";
 
 export default class RegistrationForm extends React.Component{
 /*hardcoded email password should be cleaned before setting up DB*/ 
