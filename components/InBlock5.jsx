@@ -86,13 +86,13 @@ export default function Block(){
                     Оставьте свои контактные данные и менеджер <br />PEGAS CAPITAL свяжется с вами в ближайшее время!
                     </Article>
                     <form onSubmit={sendEmail}>
-                        <div>
+                        <div style={{marginBottom:'1em'}}>
                             <input type="text" className="form-control" placeholder="Имя" name="name"/>
                         </div>
-                        <div>
+                        <div style={{marginBottom:'1em'}}>
                             <input type="email" className="form-control" placeholder="E-mail" name="email"/>
                         </div>
-                        <div>
+                        <div style={{marginBottom:'1em'}}>
                             <input type="tel" className="form-control" placeholder="+7" name="phone"/>
                         </div>
                         <div>
