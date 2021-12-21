@@ -229,9 +229,9 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   .input-submit {
     font-size: .9em;
     color: #fff;
-    background: #52a5b8;
+    background: rgb(0, 133, 255);
     outline: none;
-    border: 1px solid #52a5b8;
+    border: 1px solid #528cb8;
     cursor: pointer;
     padding: 0.9em;
     -webkit-appearance: none;
