@@ -80,7 +80,7 @@ const Layout = ({ title, children, auth }) => {
     -webkit-box-align: center;
     place-items: center stretch;
    
-    justify-content: center;
+    justify-content: space-around;
 }
             
             .root{
