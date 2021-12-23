@@ -9,7 +9,7 @@ const Layout = ({ title, children, auth }) => {
 
     const [style, setStyle] = useState({display: 'none'});
     const { user = {} } = auth || {}
-    console.log(user)
+    
     //const {btc = {}} = btc || {}
     return(
     <div className = "root">

@@ -175,7 +175,7 @@ class Adv extends React.Component {
             }
             .paym{
                 display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     column-gap: 84px;
     background: rgb(255, 255, 255);
     border-radius: 6px;
