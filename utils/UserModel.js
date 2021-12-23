@@ -11,6 +11,7 @@ const Schem = new Schema({
     email: { type : String , unique : true, required : true, dropDups: true },
     password: String,
     refer: String,
+    phone: Number,
     date: { type: Date, default: Date.now }
 })
 
@@ -34,6 +35,9 @@ class UserClass {
     }
     set ref(refer){
         this.refer = refer;
+    }
+    set phone(phone){
+        this.phone = phone;
     }
 
     static findByEmail(email){

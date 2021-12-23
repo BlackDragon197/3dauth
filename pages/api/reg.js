@@ -5,7 +5,7 @@ export default async function reg(req, res) {
 
     if(req.method === 'POST')
     {
-        const {name, email, password, refer} = req.body;
+        const {name, email, password, refer, phone} = req.body;
         
         UserModel.countDocuments({email: email}, async function (err, count) { 
             if(count>0)
@@ -18,7 +18,8 @@ export default async function reg(req, res) {
                     name: name,
                     email: email,
                     password: password,
-                    refer: refer
+                    refer: refer,
+                    phone: phone
                 })
                     //const mem = await doc.save()
                     //doc.save()

@@ -12,7 +12,8 @@ state = {
     password:'',
     error: '',
     isLoading: false,
-	refer: ''
+	refer: '',
+	phone:''
 };
 
 handleChange = event => {
@@ -20,14 +21,14 @@ handleChange = event => {
 }
 
 handleSubmit = event => {
-    const {name, email, password, refer} = this.state;
+    const {name, email, password, refer, phone} = this.state;
 
     event.preventDefault();
     this.setState({error: "", isLoading: true})
     //console.log(this.state);
     
-    createUser(name, email, password, refer).then(()=>{
-       console.log(name, email, password, refer)
+    createUser(name, email, password, refer, phone).then(()=>{
+       console.log(name, email, password, refer, phone)
       
     }).catch(this.showError)
 
@@ -40,7 +41,7 @@ showError = err => {
 }
 
     render(){
-        const {name, email, password, refer, error, isLoading} = this.state
+        const {name, email, password, refer, error, phone, isLoading} = this.state
 
         return(
           
@@ -53,6 +54,7 @@ showError = err => {
 					Email<input className="text email input-email" type="email" name="email" placeholder="" required="" value={email} onChange={this.handleChange}/>
 					Пароль<input className="text input-password" type="password" name="password" placeholder="" required="" value={password} onChange={this.handleChange}/> <br />
 					ID пригласившего:<input className="text input-text" type="text" name="refer" placeholder="" required="" value={refer} onChange={this.handleChange}/>
+					Телефон<input className="text input-text" type="number" name="phone" placeholder="" required="" value={phone} onChange={this.handleChange}/>
 					<div className="wthree-text">
 						<label className="anim">
 							<input type="checkbox" className="checkbox" required="" />
