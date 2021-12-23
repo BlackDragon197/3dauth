@@ -161,7 +161,7 @@ export default function Block(){
             <Heading />
                 {peep}
                 <div style={{position:"relative", top: "72vh", left: "18.646vw", maxWidth:"30%"}}>
-                <AddPostBtn>Бесплатная регистрация 
+                <AddPostBtn href="/registration">Бесплатная регистрация 
                 <Image src='/lock.png' width="11%" height="14%" className="lock" />
                     
                    

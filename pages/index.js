@@ -102,10 +102,10 @@ if(!isMobile){
             Выбирайте 1 из 3 инвестиционных программ<br/><span style={{fontWeight:'600', fontStyle:'normal',color: '#939393'}}>и приумножайте свой капитал</span>
                 </span>
             </div>
-        <AddBtn width="12.719vw" background="#0085FF" left="12.240vw" style={{position:'absolute', top:'17vw', left:'0'}}>Получить консультацию                    
+        <AddBtn href="#contact" width="12.719vw" background="#0085FF" left="12.240vw" style={{position:'absolute', top:'17vw', left:'0'}}>Получить консультацию                    
                        
         </AddBtn>
-        <AddBtn  width="16.667vw" background="#15274E" left="14.240vw" style={{position:'absolute', top:'17vw'}}>Программы сотрудничества                    
+        <AddBtn href="#invest"  width="16.667vw" background="#15274E" left="14.240vw" style={{position:'absolute', top:'17vw'}}>Программы сотрудничества                    
                        
         </AddBtn>
         {/*<Image src='/coin.png' width='470px' height='500px' style={{position:'absolute', top:'0'}}/>*/}
