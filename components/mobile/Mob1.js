@@ -91,10 +91,9 @@ export default function Mob1(){
         <div style={{marginTop: '40px',position:'relative',height:'76.2%',display:'', background: '#F7F8FB', backgroundPosition: 'top right', backgroundImage:'url(/wrapperbg.png)', backgroundRepeat:'no-repeat', backgroundSize:'300%'}}>
         
           <div className="graph1899" style={{background: 'rgba(242,245,248)'}}><img src="/block1/phone.png" /></div>
-          <div className="container" style={{ height:'48vh',backgroundPosition: 'bottom right, top right 18%', backgroundImage:'url(), url()', backgroundRepeat:'no-repeat', backgroundSize:'44%, 17%'}}>
           
           
-        </div>
+        
     
     </div>
     </div>
