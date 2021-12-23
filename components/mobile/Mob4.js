@@ -132,7 +132,7 @@ export default function Mob4(){
                     <Textbox width="80%">
                     Вы инвестировали 10 000 рублей.<br/><br/> Уже через 3 дня вам начинают начислять проценты.<br/><br/> За это время компания создаёт отдельный криптокошелёк для клиента и команда трейдеров начинает торговлю на бирже. <br/><br/>Проценты можно выводить, имея от 1 000 рублей начисленных процентов.<br/><br/> Вывод тела депозита можно заказать в любой момент, компания вернёт его вам в течение 14 рабочих дней.
                     </Textbox>
-                    <AddBtn  width="60vw" background="#15274E" style={{marginTop:'5vh', marginBottom: '5vh'}}>
+                    <AddBtn href="/login" width="60vw" background="#15274E" style={{marginTop:'5vh', marginBottom: '5vh'}}>
                     Выбрать программу                   
                     </AddBtn>
                     <div style={{position: 'absolute', zIndex:'1', right: '-20vw', bottom: '-15vh', transform:'rotate(-45deg)'}}>
@@ -155,7 +155,7 @@ export default function Mob4(){
                         <Textbox width="80%">
                         Проценты можно выводить, имея на счету от 10 000 рублей начисленных процентов. Вывод тела депозита можно заказать в любой момент, компания вернёт его вам в течение 21 рабочего дня. Данный индекс позволяет клиенту участвовать в ico, которое будет проведено в 2022 году, клиент получит бесплатные коины, которые сможет обменять на реальные деньги.
                         </Textbox>
-                        <AddBtn width="60vw" background="#15274E" style={{marginTop:'5vh', marginBottom: '5vh'}}>
+                        <AddBtn href="/login" width="60vw" background="#15274E" style={{marginTop:'5vh', marginBottom: '5vh'}}>
                             Выбрать программу
 
                 </AddBtn>
@@ -191,7 +191,7 @@ export default function Mob4(){
                         Возможно внесение депозита золотыми слитками.
 Для информации о внесении депозита золотом обратитесь к оператору
                         </Textbox>
-                        <AddBtn  width="60vw" background="#15274E" style={{marginTop:'5vh', marginBottom: '5vh'}}>
+                        <AddBtn href="/login" width="60vw" background="#15274E" style={{marginTop:'5vh', marginBottom: '5vh'}}>
                             Выбрать программу                   
                    
                 </AddBtn>

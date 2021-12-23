@@ -173,7 +173,7 @@ export default function Mob3(){
                 {peep}
                 </div>
                 <div style={{marginBottom:'15vh', marginTop: '10vh', display: 'flex', justifyContent:'center'}}>
-                <AddPostBtn>Бесплатная регистрация 
+                <AddPostBtn href="/registration">Бесплатная регистрация 
                 <Image src='/lock.png' width="11%" height="14%" className="lock" />
                     
                    

@@ -76,12 +76,12 @@ export default function Mob1(){
                 </span>
             </div>
             <div style={{position: 'relative', width: '100%', display:'flex', justifyContent:'flex-start', marginLeft:'30px', marginTop:'30px'}}>
-        <AddBtn width="52.719vw" background="#0085FF" >Получить консультацию                    
+        <AddBtn href="#contact" width="52.719vw" background="#0085FF" >Получить консультацию                    
                      
         </AddBtn>
         </div>
         <div style={{position: 'relative', width: '100%', display:'flex', justifyContent:'flex-start', marginLeft:'30px', marginTop:'10px'}}>
-        <AddBtn  width="62.667vw" background="#15274E">Программы сотрудничества                    
+        <AddBtn href="#invest" width="62.667vw" background="#15274E">Программы сотрудничества                    
                        
         </AddBtn>
         </div>  
