@@ -24,10 +24,10 @@ export default function Mobilenu () {
       <a className="menu-item" href="#onas">
         О Pegas
       </a>
-      <a className="menu-item" href="#onas">
+      <a className="menu-item" href="/login">
         Вход
       </a>
-      <a className="menu-item" href="#onas">
+      <a className="menu-item" href="/registration">
         Регистрация
       </a>
     </Menu>
