@@ -7,7 +7,7 @@ class CurrentIndex extends React.Component {
        
       }
     render() {
-       const{user} = this.props.props.auth
+       const{user} = this.props.props.auth;
       return <div className="kol">
         
       <div className="row4" style={{background: 'url(../back2.png)', backgroundSize: '100% 100%'}}>

@@ -18,7 +18,7 @@ class ProfileMenu extends React.Component {
 
   this.state = {
       currentMenuItem: 'CurrentIndexMob',
-      name: 'CurrentIndexMob',
+      name: 'CurrentIndexMob'
   }
 }
 
