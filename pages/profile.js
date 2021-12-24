@@ -14,6 +14,7 @@ export default class Profile extends React.Component{
     constructor(props) {
         super(props)
         this.state = { matches: window.matchMedia("(min-width: 768px)").matches };
+        this.state.summ = props.summ
       }
 
       componentDidMount() {
@@ -26,7 +27,7 @@ export default class Profile extends React.Component{
         return(
             <div>
             { this.state.matches && (<Layout title="Мой аккаунт" {...this.props}>
-            <CurrentIndex />
+            {/* <CurrentIndex/> */}
            {/* <pre>{JSON.stringify(this.state.user, null, 2)}</pre>
             Текущий Индекс*/}
             <ProfileMenu />
@@ -36,7 +37,7 @@ export default class Profile extends React.Component{
                     <MobileMenuProfile customBurgerIcon={ <img src="public/mobile/icon.png" /> }  pageWrapId={"page-wrap"} />
                     <div id="page-wrap">
                         <LayoutMob title="Мой аккаунт" {...this.props}>
-                        <ProfileMenuMob />
+                        <ProfileMenuMob {...this.props}/>
                         </LayoutMob>
                     </div>
                 </div>

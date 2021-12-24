@@ -1,6 +1,7 @@
 import * as React from "react";
 
 class CurrentIndex extends React.Component {
+
     render() {
       return <div className="kol">
         

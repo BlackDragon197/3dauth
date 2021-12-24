@@ -12,6 +12,9 @@ const Schem = new Schema({
     password: String,
     refer: String,
     phone: String,
+    currentDep: {type: String, default: 'Не выбран'},
+    summ: {type:Number, default: 0.00},
+    dateEnd: {type: Date},
     date: { type: Date, default: Date.now }
 })
 
@@ -38,6 +41,15 @@ class UserClass {
     }
     set userPhone(phone){
         this.phone = phone;
+    }
+    set usercurrentDep(currentDep){
+        this.currentDep = currentDep;
+    }
+    set usersumm(summ){
+        this.summ = summ;
+    }
+    set userdateEnd(dateEnd){
+        this.dateEnd = dateEnd;
     }
 
     static findByEmail(email){

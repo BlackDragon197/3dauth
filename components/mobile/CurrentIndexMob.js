@@ -1,8 +1,13 @@
 import * as React from "react";
-
+import  { PropTypes } from 'react'
 
 class CurrentIndex extends React.Component {
+    constructor(props) {
+        super(props)
+       
+      }
     render() {
+       const{user} = this.props.props.auth
       return <div className="kol">
         
       <div className="row4" style={{background: 'url(../back2.png)', backgroundSize: '100% 100%'}}>
@@ -21,7 +26,7 @@ class CurrentIndex extends React.Component {
                         <span className="cringe">Выбрано:</span>
                     </div>
                     <div className="col3desc2">
-                        Не выбран
+                    {user.currentDep}
                     </div>
                 </div>
                 <button className="cringebut"></button>
@@ -43,7 +48,7 @@ class CurrentIndex extends React.Component {
                         <span className="cringe">Дата:</span>
                     </div>
                     <div className="col3desc2">
-                    -
+                    {user.dateEnd ? (user.dateEnd.substring(0,10)):("-")}
                     </div>
                 </div>
                 <button className="cringebut"></button>
@@ -65,7 +70,7 @@ class CurrentIndex extends React.Component {
                         <span className="cringe">Сумма:</span>
                     </div>
                     <div className="col3desc2">
-                    0.00
+                    {user.summ} р.
                     </div>
                 </div>
                 <button className="cringebut"></button>

@@ -19,7 +19,7 @@ const Layout = ({ title, children, auth }) => {
             
             
             <div className="topdiv1">
-            <span><a href="https://pegascapital.herokuapp.com/"><Image src={logo} width='110px' height='90px'/></a></span>
+            <span><a href="http://pegascapital.ru/"><Image src={logo} width='110px' height='90px'/></a></span>
             </div>
                 {/*<Link href="">
                     <a>Курс биткоина(USD): {btcPrice}</a>
@@ -28,7 +28,7 @@ const Layout = ({ title, children, auth }) => {
                 
                 
                 {user.email ? (
-                   
+                  
                 <div className="topdiv2">
                     {/* <Link href="/profile">
                         <a>Profile</a>
@@ -72,12 +72,84 @@ const Layout = ({ title, children, auth }) => {
             
             </div>
         </div>
-        </div>
         <h1>{title}</h1>
+        <div className="kol">
+        
+        <div className="column4" style={{background: 'url(../back2.png)', backgroundSize: '100% 100%'}}>
+        {/*<h2 className="flex-basis">Текущий Индекс</h2>*/}
+            <div className="col1">
+                <h3>Текущий Депозит</h3>
+                <div className="curIndex"><h3>
+                {user.currentDep}</h3>
+                </div>
+            </div>
+            <div className="col1">
+            <h3>Дата окончания</h3>
+                <div className="curIndex">
+                <h3>
+
+{user.dateEnd ? (user.dateEnd.substring(0,10)):("-")}
+
+                </h3>
+                </div>
+            </div>
+            <div className="col1">
+            <h3>Сумма:</h3>
+                <div className="curIndex">
+                <h3>{user.summ} р.</h3>
+                </div>
+            </div>
+            <div className="col1">
+            <h3>Доступно для вывода:</h3>
+                <div className="curIndex">
+                <h3>0.00</h3>
+                </div>
+            </div>
+        </div>
+        
+  
+        
+        </div>
+
+        </div>
+        
         {children}
 
         <style jsx>
             {`
+            .kol{
+                width: 100%;
+              }
+              .curIndex{
+                width: 80%;
+                height: 25%;
+                justify-content: center;
+                align-items: center;
+                
+              }
+              .flex-basis{
+                flex-basis:100%;
+              }
+            .column4{
+              background-image: url(./public/back2.png);
+              background-size: 100%;
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap; 
+                height: 250px;
+                align-items: center;
+                flex-direction: row;
+                width: 100%;
+            }
+              .col1{
+                flex-direction: column;
+                width: 20%;
+                height: 75%;
+                background: rgba(0,90,155,0.1);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              }
             .dropdown button{
                 clear: both;
     list-style: none;

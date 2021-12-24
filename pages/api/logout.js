@@ -7,5 +7,5 @@ export default function logout(req, res){
 
     cookies.set('token')
     cookies.set('token.sig')
-    res.sendStatus(204);
+    res.status(204);
 }

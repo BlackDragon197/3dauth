@@ -11,12 +11,17 @@ import { TiChartLineOutline } from "react-icons/ti";
 import { TiGroupOutline } from "react-icons/ti";
 import { TiBriefcase } from "react-icons/ti";
 
+import { authInitialProps } from "../../lib/auth";
 class ProfileMenu extends React.Component {
+  constructor(props) {
+    super(props);
 
-  state = {
+  this.state = {
       currentMenuItem: 'CurrentIndexMob',
-      name: 'CurrentIndexMob'
+      name: 'CurrentIndexMob',
   }
+}
+
   showComponent(componentName) {
     this.setState({currentMenuItem: componentName});
   }
@@ -34,10 +39,11 @@ class ProfileMenu extends React.Component {
     case "MoneyBack":
       return <MoneyBack />
       case "CurrentIndexMob":
-        return <CurrentIndexMob/>
+        return <CurrentIndexMob props={this.props}/>
   }
 }
 renderName(){
+  
   switch(this.state.name){
     case "PaymentComponent":
       return "Способы оплаты"
@@ -52,8 +58,10 @@ renderName(){
   }
 }
     render() {
+      const {user} = this.props.auth;
       return (
       <div style={{width: '100%'}}>
+      
       <div className="row2">
       <section className="section2">
               <div className="rightsec">
@@ -214,6 +222,4 @@ renderName(){
   } 
 
 export default ProfileMenu
-
-
 
