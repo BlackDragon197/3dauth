@@ -22,7 +22,7 @@ export default async function handler(req, res) {
     try{
     const user = await requestInstance({url: 'getUser',data:{email: email, password: password}
     })
-    console.log('tut kek from server.js ', user)
+    // console.log('tut kek from server.js ', user)
    if(!user.data){
         return res.status(403).send('Invalid email or password');
     } else if(email == user.data.email){
@@ -32,15 +32,26 @@ export default async function handler(req, res) {
         email: user.data.email,
         type: AUTH_USER_TYPE,
         refer: user.data.refer,
-        currentDep: user.data.currentDep,
+        // currentDep: user.data.currentDep,
         summ: user.data.summ,
         dateEnd: user.data.dateEnd
     }
     //console.log(userData)
-    cookies.set('token', userData, COOKIE_OPTIONS);
+    const kek = {
+        data: 'sosi',
+        data2: '22'
+    }
+    const string2 = JSON.stringify(userData);
+    const string = JSON.stringify(kek);
+    console.log(string,string2);
+    cookies.set('token', string2 , {
+        httpOnly:true,
+        signed:true
+    });
     var token = cookies.get('token', { signed: true })
     //res.send(token);
-    console.log(token)
+
+    console.log("eto token",token);
     return res.json(userData)
 }
 }catch(e){

@@ -8,8 +8,12 @@ import profileicon from '../public/profileicon.svg'
 const Layout = ({ title, children, auth }) => {
 
     const [style, setStyle] = useState({display: 'none'});
-    const { user = {} } = auth || {}
-    
+    // const { user = {} } = auth || {}
+    // console.log('simple layout yser',auth)
+    let { user} = auth || {}
+    if(!user){
+        user = auth
+    }
     //const {btc = {}} = btc || {}
     return(
     <div className = "root">

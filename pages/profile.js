@@ -9,11 +9,17 @@ import DynamicWidth from '../components/DynamicWidth'
 import useDeviceSize from "../components/DynamicWidth";
 import MobileMenuProfile from "../components/mobile/MobileMenuProfile";
 import ProfileMenuMob from "../components/mobile/ProfileMenuMob";
+
+
 export default class Profile extends React.Component{
 
     constructor(props) {
         super(props)
-        this.state = { matches: window.matchMedia("(min-width: 768px)").matches };
+        if (typeof window !== "undefined") {
+        this.state =  {matches :window.matchMedia("(min-width: 768px)").matches} }
+        else{
+            this.state = {matches:true}
+        }
         this.state.summ = props.summ
       }
 
@@ -23,7 +29,9 @@ export default class Profile extends React.Component{
       }
 
     render(){
-
+        console.log(checkSuka)
+        console.log('eto state matches', this.state.matches)
+console.log('props kotorie tuda',this.props)
         return(
             <div>
             { this.state.matches && (<Layout title="Мой аккаунт" {...this.props}>
@@ -38,7 +46,7 @@ export default class Profile extends React.Component{
                     <div id="page-wrap">
                         <LayoutMob title="Мой аккаунт" {...this.props}>
                         <ProfileMenuMob {...this.props}/>
-                        </LayoutMob>
+                        </LayoutMob >
                     </div>
                 </div>
             )}

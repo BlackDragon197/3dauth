@@ -39,7 +39,7 @@ class ProfileMenu extends React.Component {
     case "MoneyBack":
       return <MoneyBack />
       case "CurrentIndexMob":
-        return <CurrentIndexMob props={this.props}/>
+        return <CurrentIndexMob {...this.props}/>
   }
 }
 renderName(){
@@ -58,7 +58,10 @@ renderName(){
   }
 }
     render() {
-      const {user} = this.props.auth;
+      let { user} = this.props.auth || {}
+    if(!user){
+        user = this.props
+    }
       return (
       <div style={{width: '100%'}}>
       

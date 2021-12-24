@@ -7,7 +7,12 @@ class CurrentIndex extends React.Component {
        
       }
     render() {
-       const{user} = this.props.props.auth;
+        let { user} = this.props.auth || {}
+        if(!user){
+            user = this.props.auth
+        }
+    //    console.log(this.props)
+    console.log('userin what',user)
       return <div className="kol">
         
       <div className="row4" style={{background: 'url(../back2.png)', backgroundSize: '100% 100%'}}>
@@ -26,7 +31,7 @@ class CurrentIndex extends React.Component {
                         <span className="cringe">Выбрано:</span>
                     </div>
                     <div className="col3desc2">
-                    {user.currentDep}
+                    idi nahui
                     </div>
                 </div>
                 <button className="cringebut"></button>

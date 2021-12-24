@@ -7,8 +7,12 @@ import profileicon from '../../public/profileicon.svg'
 import MobileMenuProfile from './../mobile/MobileMenuProfile'
 const Layout = ({ title, children, auth }) => {
 
-    const { user = {} } = auth || {}
-    
+    // const { user = {} } = auth || {}
+    let { user} = auth || {}
+    if(!user){
+        user = auth
+    }
+    // console.log('consoile user',user)
     //const {btc = {}} = btc || {}
     return(
     <div className = "root">
