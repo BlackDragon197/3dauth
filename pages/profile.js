@@ -29,7 +29,6 @@ export default class Profile extends React.Component{
       }
 
     render(){
-        console.log(checkSuka)
         console.log('eto state matches', this.state.matches)
 console.log('props kotorie tuda',this.props)
         return(
