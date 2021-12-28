@@ -2,7 +2,8 @@ import * as React from "react";
 import Image from "next/image";
 import AdvMob from "./AdvMob";
 import Qiwi from "./../Qiwi";
-import Wallet from './../Wallet'
+import WalletMob from './WalletMob'
+import PaymentByDetailsMob from './PaymentByDetailsMob'
 
 class AdvCash extends React.Component {
 
@@ -25,7 +26,8 @@ renderPayment(){
   switch(this.state.payment){
     case 1: return <AdvMob />
     //case 2: return <Qiwi />
-    case 2: return <Wallet />
+    case 2: return <WalletMob />
+    case 3: return <PaymentByDetailsMob />
   }
 }
 
@@ -78,6 +80,17 @@ renderComponent(){
                   </div>
                   <div>
                       Прямая оплата
+                  </div>
+              </div>
+            </div>
+
+            <div className="col1 space">
+              <div className="col1in" onClick={() => this.setPayment(3)}>
+                  <div className="c1" active="true">  
+                    <Image src="/usd.svg" width="120" height="40"/>
+                  </div>
+                  <div style={{width: 'max-content'}}>
+                      Реквизиты компании
                   </div>
               </div>
             </div>
@@ -154,7 +167,7 @@ renderComponent(){
           background-size: 100%;
             display: flex;
             justify-content: flex-start;
-            flex-wrap: wrap; 
+            overflow-x: auto;
             height: 250px;
             align-items: center;
             flex-direction: row;

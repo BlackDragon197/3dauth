@@ -29,18 +29,18 @@ class Adv extends React.Component {
         
       return (
           
-        <div className="paym">
-            <div>
-                <div className="donutwith">
+        <div className="paym3">
+            <div style={{minWidth: '400px'}}>
+                <div className="donutwith3">
                     Пополнение через AdvCash
                 </div>
                 <form onSubmit={ (e) => {e.preventDefault(); this.handleSend()}}> 
                     <div style={{marginBottom: '1em', position:'relative'}}>
-                        <label className="lab">Сумма пополнения</label>
-                        <input inputMode="decimal" placeholder="Сумма пополнения" className="inp" type="text" onChange={this.handleChange} value={this.state.amount}></input>
-                        <span className="valute"><span>RUB</span></span>
+                        <label className="lab3">Сумма пополнения</label>
+                        <input inputMode="decimal" placeholder="Сумма пополнения" className="inp3" type="text" onChange={this.handleChange} value={this.state.amount}></input>
+                        <span className="valute3"><span>RUB</span></span>
                     </div>
-                    <div className="cont1">
+                    <div className="cont13">
                         <span className="span90">
 Комиссия
                         </span>
@@ -53,7 +53,7 @@ class Adv extends React.Component {
                 </form>
             </div>
             <div className="gzlqb7-9 foJCFM">
-                <div type="warning" className="cont32">
+                <div type="warning" className="cont32" style={{maxWidth: '500px', minWidth: '450px'}}>
                         <div className="type1">Комиссия</div>
                         <div className="type2">2.0% </div>
                         <br/>
@@ -117,7 +117,7 @@ class Adv extends React.Component {
     line-height: 17px;
     font-weight: 400;
             }
-            .cont1::before{
+            .cont13::before{
                 content: "";
     position: absolute;
     bottom: 0.3rem;
@@ -126,17 +126,17 @@ class Adv extends React.Component {
     line-height: 0;
     border-bottom: 1px dotted rgb(103, 103, 147);
             }
-            .cont1{
+            .cont13{
                 position: relative;
     background: white;
     margin-bottom: 0.5rem;
             }
-            .valute{
+            .valute3{
                 position: absolute;
                 top: 38px;
                 right: 15px;
             }
-            .inp:active, inp:hover, inp:focus{
+            .inp3:active, inp:hover, inp:focus{
                 border-width: 1px 1px 2px;
                 border-style: solid;
                 border-color: rgb(87, 102, 236) rgb(87, 102, 236) rgb(253, 42, 71);
@@ -144,7 +144,7 @@ class Adv extends React.Component {
                 outline: rgb(87, 102, 236);
                 transition: all 0.2s ease-in-out 0s;
             }
-            .inp{
+            .inp3{
                 line-height: 19px;
     width: 100%;
     font-size: 16px;
@@ -159,22 +159,22 @@ class Adv extends React.Component {
     padding: 14px 13px 13px 14px;
     transition: all 0.2s ease 0s;
             }
-            .lab{
+            .lab3{
                 font-size: 12px;
     line-height: 18px;
     color: rgb(147, 169, 195);
     display: inline-block;
     margin-bottom: 5px;
             }
-            .donutwith{
+            .donutwith3{
                 font-size: 24px;
     line-height: 28px;
     color: rgb(0, 0, 0);
     font-weight: 500;
     margin-bottom: 24px;
             }
-            .paym{
-                display: grid;
+            .paym3{
+                display: flex;
     grid-template-rows: 1fr 1fr;
     column-gap: 84px;
     background: rgb(255, 255, 255);

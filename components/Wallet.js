@@ -7,7 +7,7 @@ class Adv extends React.Component {
       return (
         <div className="paym">
             
-            <div>
+            <div style={{minWidth: '400px'}}>
                 <div className="donutwith">
                     Пополнение напрямую на кошелёк
                 </div>
@@ -70,6 +70,8 @@ class Adv extends React.Component {
     border: 2px solid rgb(255, 230, 4);
     padding: 24px;
     margin-bottom: 16px;
+    word-break: break-word;
+    max-width: 500px;
             }
 
             .btnpay{
@@ -160,9 +162,9 @@ class Adv extends React.Component {
     margin-bottom: 24px;
             }
             .paym{
-                display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 84px;
+                display: flex;
+    flex-direction: row;
+    column-gap: 44px;
     background: rgb(255, 255, 255);
     border-radius: 6px;
     margin-top: 34px;

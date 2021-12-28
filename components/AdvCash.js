@@ -3,6 +3,7 @@ import Image from "next/image";
 import Adv from "./Adv";
 import Qiwi from "./Qiwi";
 import Wallet from './Wallet'
+import PaymentByDetails from './PaymentByDetails'
 
 class AdvCash extends React.Component {
 
@@ -26,6 +27,7 @@ renderPayment(){
     case 1: return <Adv />
     //case 2: return <Qiwi />
     case 2: return <Wallet />
+    case 3: return <PaymentByDetails/>
   }
 }
 
@@ -82,6 +84,17 @@ renderComponent(){
               </div>
             </div>
             
+            <div className="col1 space">
+              <div className="col1in" onClick={() => this.setPayment(3)}>
+                  <div className="c1" active="true">  
+                    <Image src="/usd.svg" width="120" height="40"/>
+                  </div>
+                  <div style={{width: 'max-content'}}>
+                    Реквизиты компании
+                  </div>
+              </div>
+            </div>
+
           </div>
           {this.renderPayment()}
          
