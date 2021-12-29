@@ -7,30 +7,29 @@ display: flex;
 flex-direction: column;
 position: relative;
 justify-content: center;
-
 `
 
 const Form= styled.div`
 width: 100%;
 //height: 100%;
 //background: red;
-display: block;
-align-items: baseline;
-justify-content: baseline;
+display: flex;
+align-items: center;
+justify-content: center;
 flex-direction: column;
 `
 
 const ImgCont= styled.div`
-width: 39.583vw;
+width: 85%;
 height: 100%;
 //background: green;
 display: flex;
 `
 
 const FormContent = styled.div`
-width: 40.313vw;
+width: 85%;
 //height: 63.761vh;
-display: block;
+text-align: left;
 margin: ${props => props.margin};
 ${props => props.form1}
 `
@@ -45,7 +44,6 @@ background: -webkit-linear-gradient(left, #15274E, #fff);
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
 background-clip: text;
-
 `
 
 const Divcont = styled.div`
@@ -53,53 +51,46 @@ background: rgba(21, 39, 78, 0.6);
 backdrop-filter: blur(10px);
 border-radius: 7px 7px 0px 7px;
 //height: 39.844%;
-width: 45%;
-padding: 1.5vh 1.5vw 1.5vw 2.5vh;
-font-family: 'Lato', sans-serif;
+width: 85%;
+padding: 3vh 1.5vw 3vh 3vh;
+font-family: 'Inter';
 font-style: italic;
-font-weight: 400;
+font-weight: 300;
 letter-spacing: .05rem;
-font-size: 1.042vw;
-line-height: 1.406vw;
-/* or 135% */
+font-size: 4vw;
+line-height: 5.4vw;
+text-align: left;
 color: #FFFFFF;
-
 `
-
 export default function Block(){
-    
     return (
-        <div>
+        <div style={{marginTop:'40px'}}>
         <BlockCont id="onas">
             <div>
                 <Head>
                 О компании
                 </Head>
             </div>
-                <div style={{position: 'relative', right: '0', height:'102.870vh', zIndex:'1', transform:'rotate(-10deg)' }}>
-                 <img src="/block6/notebook2.png" /> 
+                <div style={{position: 'relative', right: '0', height:'', zIndex:'1', transform:'rotate(-10deg)' }}>
+                 <img src="/mobile/block6/1.png" style={{transform: 'rotate(15deg)'}}/> 
                 </div>    
-            
             <Form>
-                    
-                    <FormContent margin="0 0 5vh 0" form1={{kek:"font-family: 'Lato', sans-serif;font-style: normal;font-weight: bold;font-size: 1.563vw;line-height: 1.863vw;color: #15274E"}}>
+                    <FormContent margin="0 0 3vh 0" form1={{kek:"font-family: 'Lato', sans-serif;font-style: normal;font-weight: bold;font-size: 4.2vw;line-height: 4.8vw;color: #15274E"}}>
                     Pegas Capital — инвестиционная компания с 5-летним опытом работы, представляющая полный спектр брокерских и инвестиционных услуг.
                     </FormContent>
-                    <FormContent margin="0 0 10vh 0" form1={{kek:"font-family: Lato;font-style: normal;font-weight: 500;font-size: 0.95vw;line-height: 1.3vw;color: #15274E;"}}>
+                    <FormContent margin="0 0 5vh 0" form1={{kek:"font-family: Lato;font-style: normal;font-weight: 500;font-size: 3.4vw;line-height: 4.1vw;color: #15274E;"}}>
                     На сегодняшний день представлена в большинстве регионов России. Мы — это более 500 опытных трейдеров, аналитиков и инвесторов из России, СНГ, Европы и Китая.
                     </FormContent>
                     <Divcont>
                     "Многие инвестиционные компании работают только с крупными инвесторами, повышая порог входа. Это совершенно закрывает путь для людей, которые только пробуют свои силы в инвестировании. Мы пошли по другому пути! Наша цель — это доступный рынок для каждого гражданина вне зависимости от его дохода."
                     </Divcont>
+                    <div style={{ bottom:'-16vh',position:'absolute',left:'0vw',background:'url(/block6/bitcoin2.png)',backgroundRepeat:'no-repeat',backgroundSize:"100%",width:'24vw', height:'24vh'}}>
+        </div>
             </Form>
-            <div style={{display: 'block', top:'-15vh',position:'absolute',right:'10vw',background:'url(/block6/bitcoin1.png)',backgroundRepeat:'no-repeat',backgroundSize:'100%',display:'block',width:'18vw', height:'42vh'}}>
-                
+            <div style={{display: 'block', top:'0',position:'absolute',right:'-10vw',background:'url(/block6/bitcoin1.png)',backgroundRepeat:'no-repeat',backgroundSize:'100%',display:'block',width:'36vw', height:'42vh'}}>
         </div>
-        <div style={{ bottom:'0',position:'absolute',left:'0vw',background:'url(/block6/bitcoin2.png)',backgroundRepeat:'no-repeat',backgroundSize:"100%",width:'12vw', height:'42vh'}}>
-                
-        </div>
-        </BlockCont>
         
+        </BlockCont>
         </div>
     )
 }
