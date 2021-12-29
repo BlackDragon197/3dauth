@@ -76,7 +76,7 @@ export default function Block(){
                 </div>    
             <Form>
                     <FormContent margin="0 0 3vh 0" form1={{kek:"font-family: 'Lato', sans-serif;font-style: normal;font-weight: bold;font-size: 4.2vw;line-height: 4.8vw;color: #15274E"}}>
-                    Pegas Capital — инвестиционная компания с 5-летним опытом работы, представляющая полный спектр брокерских и инвестиционных услуг.
+                    Pegas Capital — трейдинговая компания с 5-летним опытом работы, представляющая полный спектр брокерских и инвестиционных услуг.
                     </FormContent>
                     <FormContent margin="0 0 5vh 0" form1={{kek:"font-family: Lato;font-style: normal;font-weight: 500;font-size: 3.4vw;line-height: 4.1vw;color: #15274E;"}}>
                     На сегодняшний день представлена в большинстве регионов России. Мы — это более 500 опытных трейдеров, аналитиков и инвесторов из России, СНГ, Европы и Китая.
