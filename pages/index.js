@@ -27,6 +27,7 @@ import Mob5 from "../components/mobile/Mob5"
 import Mob6 from "../components/mobile/Mob6"
 import Mob7 from "../components/mobile/Mob7"
 import Mob8 from "../components/mobile/Mob8"
+import Mob9 from "../components/mobile/Mob9"
 
 
 const Title = styled.h1`
@@ -77,7 +78,7 @@ export default function Index(props){
 
 
 console.log(width)
-const isMobile = width <= 500 ;
+const isMobile = width <= 500;
   
 if(!isMobile){
     return(
@@ -167,6 +168,7 @@ if(!isMobile){
         <Mob6 />
         <Mob7 />
         <Mob8 />
+        <Mob9/>
         </div>
       </div>
       )
