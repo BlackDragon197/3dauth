@@ -28,7 +28,7 @@ export default async function handler(req, res) {
     } else if(email == user.data.email){
     const userData = {
         password: user.data.password,
-        name: user.data.name,
+        //name: user.data.name,
         email: user.data.email,
         type: AUTH_USER_TYPE,
         refer: user.data.refer,

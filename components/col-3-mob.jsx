@@ -35,7 +35,7 @@ top: ${props => props.top};
 
 const srcs = [  {desc:"5 лет на рынке", content:"url(/block2g1.png);", width:"100vw", height:'', top: '5vh'},
                 {desc:"4000+ довольных клиентов", content:"url(/block2g2.png);", top:"5vh"},
-                {desc:"5 млрд. Ꝑ заработали наши клиенты", content:"url(/block2g3.png);", top:"5vh"}
+                {desc:"5 млрд. Р заработали наши клиенты", content:"url(/block2g3.png);", top:"5vh"}
             ];
 
 
