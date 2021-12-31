@@ -28,6 +28,7 @@ import Mob6 from "../components/mobile/Mob6"
 import Mob7 from "../components/mobile/Mob7"
 import Mob8 from "../components/mobile/Mob8"
 import Mob9 from "../components/mobile/Mob9"
+import Mob10 from "../components/mobile/Mob10"
 
 
 const Title = styled.h1`
@@ -168,7 +169,8 @@ if(!isMobile){
         <Mob6 />
         <Mob7 />
         <Mob8 />
-        <Mob9/>
+        <Mob9 />
+        <Mob10 />
         </div>
       </div>
       )
