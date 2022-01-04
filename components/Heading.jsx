@@ -19,7 +19,7 @@ export default function Heading(){
     
     return (
         
-        <Head height="5vw" width="33.969vw" top="0">
+        <Head height="" width="33.969vw" top="0">
             Наши достижения в цифрах
         </Head>
 

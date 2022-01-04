@@ -102,7 +102,7 @@ const Layout = ({ title, children, auth }) => {
             <div className="col1">
             <h3>Доступно для вывода:</h3>
                 <div className="curIndex">
-                <h3>0.00</h3>
+                <h3>{user.available}</h3>
                 </div>
             </div>
         </div>
@@ -301,7 +301,6 @@ const Layout = ({ title, children, auth }) => {
                 cursor: pointer;
                 border-style: none;
                 color: rgb(0,0,248)
-
             }
             `}
         </style>

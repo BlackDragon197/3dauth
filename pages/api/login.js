@@ -34,7 +34,8 @@ export default async function handler(req, res) {
         refer: user.data.refer,
         currentDep: user.data.currentDep,
         summ: user.data.summ,
-        dateEnd: user.data.dateEnd
+        dateEnd: user.data.dateEnd,
+        available: user.data.available
     }
     //console.log(userData)
     cookies.set('token', userData, COOKIE_OPTIONS);

@@ -87,13 +87,13 @@ const [buttonPopup, setButtonPopup] = useState(false);
                 <img src="/footer/logo.png" />
             </Logo>
         </NavbarItem>
-            <NavbarItem>
-                <NavBtn>
+        <NavbarItem>
+                <NavBtn href="/deposits">
                 Инвестиционные пакеты
                 </NavBtn>
             </NavbarItem>
             <NavbarItem>
-                <NavBtn>
+                <NavBtn href="/faq">
                 Faq
                 </NavBtn>
             </NavbarItem>
@@ -103,12 +103,12 @@ const [buttonPopup, setButtonPopup] = useState(false);
                 </NavBtn>
             </NavbarItem>
             <NavbarItem>
-                <NavBtn>
+                <NavBtn  href="/#contact">
                 Заказать звонок
                 </NavBtn>
             </NavbarItem>
             <NavbarItem  margin="0 3vw 0 0">
-                <NavBtn>
+                <NavBtn  href="/#onas">
                 О Pegas
                 </NavBtn>
             </NavbarItem>

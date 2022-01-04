@@ -29,7 +29,7 @@ import Mob7 from "../components/mobile/Mob7"
 import Mob8 from "../components/mobile/Mob8"
 import Mob9 from "../components/mobile/Mob9"
 import Mob10 from "../components/mobile/Mob10"
-
+import FooterMob from '../components/mobile/FooterMob'
 
 const Title = styled.h1`
   color: red;
@@ -99,7 +99,6 @@ if(!isMobile){
                 Инвестируйте вместе с Pegas Capital<br /> и гарантировано зарабатывайте <br />
 до 20% ежемесячной комиссии
                 </span>
-                
             </div>
             <div style={{height: '8vw', width: '61.994%', top:'9vw', position:'absolute', textAlign:'left', display:'flex', alignItems:'center'}}>
             <span style={{fontWeight:'500', fontStyle:'normal', fontFamily:'Gilroy', lineHeight:'140%', fontSize:'1.302vw', color: '#939393'}}>
@@ -119,14 +118,14 @@ if(!isMobile){
     </div>  
     <InBlock2 />  
     <InBlock3 />  
-    <InBlock4/> 
+    
     <div style={{height: '16.53vh'}}></div> 
     <InBlock5 />  
     <InBlock6 />  
     <InBlock7 />  
     <InBlock8 /> 
     <InBlock9 /> 
-    <InBlock10 />
+    
     <Footer />
     <style>
       {`
@@ -164,13 +163,13 @@ if(!isMobile){
         <Mob1 />
         <Mob2 />
         <Mob3 />
-        <Mob4 />
         <Mob5 />
         <Mob6 />
         <Mob7 />
         <Mob8 />
         <Mob9 />
-        <Mob10 />
+        
+        <FooterMob />
         </div>
       </div>
       )

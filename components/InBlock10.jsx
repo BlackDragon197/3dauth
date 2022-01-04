@@ -83,7 +83,7 @@ export default function Block(){
                         </AccordionSummary>
                         <AccordionDetails>
                             <Typography style={{fontWeight: '600',width: '1000px', fontFamily: "'Lato', sans-serif", fontStyle:'normal', fontSize:'1vw', lineHeight:'1.7vw', color: '#15274E'}}>
-                            Размер минимального депозита зависит каждой конкретной программы, по программе 16% доходности — депозит от 10 000 рублей.
+                            Размер минимального депозита зависит каждой конкретной программы, по программе 14% доходности — депозит от 10 000 рублей.
                             </Typography>
                         </AccordionDetails>
                     </Accordion>

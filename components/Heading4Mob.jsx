@@ -19,7 +19,7 @@ export default function Heading(){
     
     return (
         
-        <Head height="5vw" top="0">
+        <Head height="" top="0">
             Инвестиционные <br/>программы
         </Head>
 

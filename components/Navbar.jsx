@@ -83,17 +83,17 @@ const [buttonPopup, setButtonPopup] = useState(false);
 <div className="container">
     <TopBarMenu>
         <NavbarItem margin="0 6vw 0 0">
-            <Logo>
+            <Logo href="/">
                 <img src="/footer/logo.png" />
             </Logo>
         </NavbarItem>
             <NavbarItem>
-                <NavBtn href="#invest">
+                <NavBtn href="/deposits">
                 Инвестиционные пакеты
                 </NavBtn>
             </NavbarItem>
             <NavbarItem>
-                <NavBtn href="#faq">
+                <NavBtn href="/faq">
                 Faq
                 </NavBtn>
             </NavbarItem>
@@ -103,12 +103,12 @@ const [buttonPopup, setButtonPopup] = useState(false);
                 </NavBtn>
             </NavbarItem>
             <NavbarItem>
-                <NavBtn  href="#contact">
+                <NavBtn  href="/#contact">
                 Заказать звонок
                 </NavBtn>
             </NavbarItem>
             <NavbarItem  margin="0 3vw 0 0">
-                <NavBtn  href="#onas">
+                <NavBtn  href="/#onas">
                 О Pegas
                 </NavBtn>
             </NavbarItem>

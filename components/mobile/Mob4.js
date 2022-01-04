@@ -114,7 +114,7 @@ export default function Mob4(){
     
     return (
         
-        <BLock id="invest">
+        <BLock  style={{marginTop:'5vh'}} id="invest">
             <Heading />
             <Part1 style={{marginTop: '15vh'}}>
                 <div style={{position: 'absolute', zIndex:'1', left: '-10vw', top: '-15vh'}}>

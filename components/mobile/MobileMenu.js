@@ -5,11 +5,14 @@ export default function Mobilenu () {
   return (
     // Pass on our props
     <Menu {...props} right>
-      <a className="menu-item" href="#invest">
+      <a className="menu-item" href="/">
+        Главная
+      </a>
+      <a className="menu-item" href="/deposits">
         Инвестиционные пакеты
       </a>
 
-      <a className="menu-item" href="#faq">
+      <a className="menu-item" href="/faq">
         Faq
       </a>
 
