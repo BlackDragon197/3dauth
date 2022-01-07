@@ -90,10 +90,10 @@ showError = err => {
 					Пароль<input className="text input-password" type="password" name="password" placeholder="" required="" value={password} onChange={this.handleChange}/> <br />
 					ID пригласившего:<input className="text input-text" type="text" name="refer" placeholder="" required="" value={refer} onChange={this.handleChange}/>
 					Телефон<input className="text input-text" type="number" name="phone" placeholder="" required="" value={phone} onChange={this.handleChange}/>
-                    (summ)<input className="text input-text" type="number" name="summ" placeholder="" required="" value={summ} onChange={this.handleChange}/>
-                    (currentDep)<input className="text input-text" type="text" name="currendDep" placeholder="" required="" value={currendDep} onChange={this.handleChange}/>
-                    (dateEnd)<input className="text input-text" type="text" name="dateEnd" placeholder="" required="" value={dateEnd} onChange={this.handleChange}/>
-                    (available)<input className="text input-text" type="number" name="available" placeholder="" required="" value={available} onChange={this.handleChange}/>
+                    (summ) Внесено:<input className="text input-text" type="number" name="summ" placeholder="" required="" value={summ} onChange={this.handleChange}/>
+                    (currentDep) Текущий депозит<input className="text input-text" type="text" name="currendDep" placeholder="" required="" value={currendDep} onChange={this.handleChange}/>
+                    (dateEnd) Дата окончания депозита:<input className="text input-text" type="text" name="dateEnd" placeholder="" required="" value={dateEnd} onChange={this.handleChange}/>
+                    (available) Доступно для вывода:<input className="text input-text" type="number" name="available" placeholder="" required="" value={available} onChange={this.handleChange}/>
                     (admin-password)<input className="text input-text" type="text" name="admin-password" placeholder="" required="" value={adminPassword} onChange={this.handleChange}/>
 					
 					<input className="input-submit" type="submit" value="ОБНОВИТЬ ПОЛЬЗОВАТЕЛЯ" />
