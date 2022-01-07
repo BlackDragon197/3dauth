@@ -57,7 +57,7 @@ showError = err => {
 					Телефон<input className="text input-text" type="number" name="phone" placeholder="" required="" value={phone} onChange={this.handleChange}/>
 					<div className="wthree-text">
 						<label className="anim">
-							<input type="checkbox" className="checkbox" required="" />
+							<input type="checkbox" className="checkbox" required="true" />
 							<span>I Agree To The Terms  Conditions</span>
 						</label>
 						<div className="clear"> </div>

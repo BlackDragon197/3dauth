@@ -19,15 +19,16 @@ state = {
     summ: '',
     currendDep: '',
     dateEnd:'',
-    available:''
+    available:'',
+    adminPassword:''
 };
 
 handleChange = event => {
     this.setState({[event.target.name]: event.target.value});
 }
 
-updateUser (name, email, password, refer, phone, summ, currendDep, dateEnd, available){
-    const updateModel = new UpdateModel(name, email, password, refer, phone, summ, currendDep, dateEnd, available)
+updateUser (name, email, password, refer, phone, summ, currendDep, dateEnd, available, adminPassword){
+    const updateModel = new UpdateModel(name, email, password, refer, phone, summ, currendDep, dateEnd, available, adminPassword)
     const requestInstance = axios.create({
         method:'POST',
         baseURL: process.env.API,
@@ -42,12 +43,12 @@ updateUser (name, email, password, refer, phone, summ, currendDep, dateEnd, avai
 }
 
 handleSubmit = event => {
-    const {name, email, password, refer, phone, summ, currendDep, dateEnd, available} = this.state;
+    const {name, email, password, refer, phone, summ, currendDep, dateEnd, available, adminPassword} = this.state;
 
     event.preventDefault();
     this.setState({error: "", isLoading: true})
     //console.log(this.state);
-    
+    if (adminPassword == "000qqq"){
     const updateModel = new UpdateModel(name, email, password, refer, phone, summ, currendDep, dateEnd, available)
     const requestInstance = axios.create({
         method:'POST',
@@ -56,7 +57,10 @@ handleSubmit = event => {
     })
     const user = requestInstance({url: 'update',data: updateModel})
     console.log("update: ",user)
-
+    }
+    else {
+        alert('Пароль админа не введён или введён неправильно!')
+    }
     // updateUser(name, email, password, refer, phone, summ, currendDep, dateEnd, available).then(()=>{
     //    console.log(name, email, password, refer, phone, summ, currendDep, dateEnd, available)
       
@@ -72,12 +76,12 @@ showError = err => {
 }
 
     render(){
-        const {name, email, password, refer, error, phone, isLoading, summ, currendDep, dateEnd, available} = this.state
+        const {name, email, password, refer, error, phone, isLoading, summ, currendDep, dateEnd, available, adminPassword} = this.state
 
         return(
           
 	<div className="main-w3layouts">
-		<h1> Регистрация </h1>
+		<h1> ADMIN-PAGE </h1>
 		<div className="main-agileinfo">
 			<div className="agileits-top">
 				<form onSubmit={this.handleSubmit} style={{color: 'white'}}>
@@ -86,21 +90,16 @@ showError = err => {
 					Пароль<input className="text input-password" type="password" name="password" placeholder="" required="" value={password} onChange={this.handleChange}/> <br />
 					ID пригласившего:<input className="text input-text" type="text" name="refer" placeholder="" required="" value={refer} onChange={this.handleChange}/>
 					Телефон<input className="text input-text" type="number" name="phone" placeholder="" required="" value={phone} onChange={this.handleChange}/>
-                    summ<input className="text input-text" type="number" name="summ" placeholder="" required="" value={summ} onChange={this.handleChange}/>
-                    currentDep<input className="text input-text" type="text" name="currendDep" placeholder="" required="" value={currendDep} onChange={this.handleChange}/>
-                    dateEnd<input className="text input-text" type="text" name="dateEnd" placeholder="" required="" value={dateEnd} onChange={this.handleChange}/>
-                    available<input className="text input-text" type="number" name="available" placeholder="" required="" value={available} onChange={this.handleChange}/>
-					<div className="wthree-text">
-						<label className="anim">
-							<input type="checkbox" className="checkbox" required="" />
-							<span>I Agree To The Terms  Conditions</span>
-						</label>
-						<div className="clear"> </div>
-					</div>
-					<input className="input-submit" type="submit" value="SIGNUP" />
+                    (summ)<input className="text input-text" type="number" name="summ" placeholder="" required="" value={summ} onChange={this.handleChange}/>
+                    (currentDep)<input className="text input-text" type="text" name="currendDep" placeholder="" required="" value={currendDep} onChange={this.handleChange}/>
+                    (dateEnd)<input className="text input-text" type="text" name="dateEnd" placeholder="" required="" value={dateEnd} onChange={this.handleChange}/>
+                    (available)<input className="text input-text" type="number" name="available" placeholder="" required="" value={available} onChange={this.handleChange}/>
+                    (admin-password)<input className="text input-text" type="text" name="admin-password" placeholder="" required="" value={adminPassword} onChange={this.handleChange}/>
+					
+					<input className="input-submit" type="submit" value="ОБНОВИТЬ ПОЛЬЗОВАТЕЛЯ" />
 					{error && <div>{error}</div>}
 				</form>
-				<p>Уже есть аккаунт? <a href="/login"> Войти!</a></p>
+				
 			</div>
 		</div>
 
