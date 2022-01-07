@@ -76,7 +76,7 @@ showError = err => {
 
         return(
           
-	<div className="main-w3layouts wrapper">
+	<div className="main-w3layouts">
 		<h1> Регистрация </h1>
 		<div className="main-agileinfo">
 			<div className="agileits-top">
