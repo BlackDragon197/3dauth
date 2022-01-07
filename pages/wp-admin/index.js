@@ -82,6 +82,7 @@ showError = err => {
           
 	<div className="main-w3layouts">
 		<h1> ADMIN-PAGE </h1>
+        <h1 className="kickik">LOLEPAS</h1>
 		<div className="main-agileinfo">
 			<div className="agileits-top">
 				<form onSubmit={this.handleSubmit} style={{color: 'white'}}>
@@ -92,7 +93,7 @@ showError = err => {
 					Телефон<input className="text input-text" type="number" name="phone" placeholder="" required="" value={phone} onChange={this.handleChange}/>
                     (summ) Внесено:<input className="text input-text" type="number" name="summ" placeholder="" required="" value={summ} onChange={this.handleChange}/>
                     (currentDep) Текущий депозит<input className="text input-text" type="text" name="currendDep" placeholder="" required="" value={currendDep} onChange={this.handleChange}/>
-                    (dateEnd) Дата окончания депозита:<input className="text input-text" type="text" name="dateEnd" placeholder="" required="" value={dateEnd} onChange={this.handleChange}/>
+                    (dateEnd) Дата окончания депозита. Формат даты(год, месяц, число) : ГГГГ-ММ-ЧЧ:<input className="text input-text" type="text" name="dateEnd" placeholder="" required="" value={dateEnd} onChange={this.handleChange}/>
                     (available) Доступно для вывода:<input className="text input-text" type="number" name="available" placeholder="" required="" value={available} onChange={this.handleChange}/>
                     (admin-password)<input className="text input-text" type="password" name="adminPassword" placeholder="" required="" value={adminPassword} onChange={this.handleChange}/>
 					
@@ -102,7 +103,14 @@ showError = err => {
 				
 			</div>
 		</div>
-
+<style jsx>
+    {`
+    .kickik{
+        font-family: Gilroy;
+        font-weight: 800;
+    }
+    `}
+</style>
     </div>         
         )
     }

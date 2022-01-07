@@ -60,7 +60,7 @@ export default function Block(){
                         <div className="stock-textbox1"><span>Получайте бонус от депозита</span> приведённого вами пользователя 17% и дом 
                         </div>
                     </div>
-                    <div></div>
+                    
                 </div>
             </div>
             <style jsx>
@@ -128,7 +128,6 @@ export default function Block(){
                 background: none !important;
             }
             .stock-inner1>* {
-             
                 margin: 10px 0;
                 padding: 20px 0;
                 display: flex;
@@ -139,7 +138,6 @@ export default function Block(){
                 backdrop-filter: blur(5px);
                 border-radius: 11px;
               }
-              
             `}
         </style>
         </Container>
