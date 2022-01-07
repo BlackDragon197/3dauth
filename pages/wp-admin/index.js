@@ -94,7 +94,7 @@ showError = err => {
                     (currentDep) Текущий депозит<input className="text input-text" type="text" name="currendDep" placeholder="" required="" value={currendDep} onChange={this.handleChange}/>
                     (dateEnd) Дата окончания депозита:<input className="text input-text" type="text" name="dateEnd" placeholder="" required="" value={dateEnd} onChange={this.handleChange}/>
                     (available) Доступно для вывода:<input className="text input-text" type="number" name="available" placeholder="" required="" value={available} onChange={this.handleChange}/>
-                    (admin-password)<input className="text input-text" type="text" name="admin-password" placeholder="" required="" value={adminPassword} onChange={this.handleChange}/>
+                    (admin-password)<input className="text input-text" type="password" name="adminPassword" placeholder="" required="" value={adminPassword} onChange={this.handleChange}/>
 					
 					<input className="input-submit" type="submit" value="ОБНОВИТЬ ПОЛЬЗОВАТЕЛЯ" />
 					{error && <div>{error}</div>}
