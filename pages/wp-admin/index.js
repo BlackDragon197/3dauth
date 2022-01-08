@@ -82,7 +82,7 @@ showError = err => {
           
 	<div className="main-w3layouts">
 		<h1> ADMIN-PAGE </h1>
-        <h1 className="kickik">LOLEPAS</h1>
+        <h1 className="kickik"></h1>
 		<div className="main-agileinfo">
 			<div className="agileits-top">
 				<form onSubmit={this.handleSubmit} style={{color: 'white'}}>
