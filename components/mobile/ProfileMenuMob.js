@@ -37,7 +37,7 @@ class ProfileMenu extends React.Component {
     case "ReferalComponent":
       return <ReferalComponent />
     case "MoneyBack":
-      return <MoneyBack />
+      return <MoneyBack  props={this.props}/>
       case "CurrentIndexMob":
         return <CurrentIndexMob props={this.props}/>
   }
