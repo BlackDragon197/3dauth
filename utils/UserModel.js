@@ -15,6 +15,7 @@ const Schem = new Schema({
     currentDep: {type: String, default: 'Не выбран'},
     summ: {type:Number, default: 0.00},
     dateEnd: {type: Date},
+    available: {type: Number, default: 0.00},
     date: { type: Date, default: Date.now }
 })
 
@@ -50,6 +51,9 @@ class UserClass {
     }
     set userdateEnd(dateEnd){
         this.dateEnd = dateEnd;
+    }
+    set userAvailable(available){
+        this.available = available;
     }
 
     static findByEmail(email){
