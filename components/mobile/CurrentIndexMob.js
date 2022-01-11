@@ -92,7 +92,7 @@ class CurrentIndex extends React.Component {
                         <span className="cringe">Сумма:</span>
                     </div>
                     <div className="col3desc2">
-                    0.00
+                    {user.available} р.
                     </div>
                 </div>
                 <button className="cringebut"></button>
