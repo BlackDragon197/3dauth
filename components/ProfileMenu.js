@@ -7,11 +7,15 @@ import ReferalComponent from "./ReferalComponent";
 import MoneyBack from "./MoneyBack";
 
 class ProfileMenu extends React.Component {
+constructor(props){
+  super(props)
 
-  state = {
+
+  this.state = {
       currentMenuItem: 'PaymentComponent',
       name: 'PaymentComponent'
   }
+}
   showComponent(componentName) {
     this.setState({currentMenuItem: componentName});
   }
@@ -27,7 +31,7 @@ class ProfileMenu extends React.Component {
     case "ReferalComponent":
       return <ReferalComponent />
     case "MoneyBack":
-      return <MoneyBack />
+      return <MoneyBack props={this.props}/>
   }
 }
 renderName(){
@@ -43,6 +47,7 @@ renderName(){
   }
 }
     render() {
+      const {user} = this.props.auth;
       return (
       <div>
       <div className="row2">

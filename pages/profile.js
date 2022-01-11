@@ -30,7 +30,7 @@ export default class Profile extends React.Component{
             {/* <CurrentIndex/> */}
            {/* <pre>{JSON.stringify(this.state.user, null, 2)}</pre>
             Текущий Индекс*/}
-            <ProfileMenu />
+            <ProfileMenu  {...this.props}/>
             </Layout>)}
             {!this.state.matches && (
                 <div id="outer-container">

@@ -11,7 +11,6 @@ import { TiChartLineOutline } from "react-icons/ti";
 import { TiGroupOutline } from "react-icons/ti";
 import { TiBriefcase } from "react-icons/ti";
 
-import { authInitialProps } from "../../lib/auth";
 class ProfileMenu extends React.Component {
   constructor(props) {
     super(props);
@@ -37,9 +36,9 @@ class ProfileMenu extends React.Component {
     case "ReferalComponent":
       return <ReferalComponent />
     case "MoneyBack":
-      return <MoneyBack  props={this.props}/>
-      case "CurrentIndexMob":
-        return <CurrentIndexMob props={this.props}/>
+      return <MoneyBack props={this.props}/>
+    case "CurrentIndexMob":
+      return <CurrentIndexMob props={this.props}/>
   }
 }
 renderName(){
