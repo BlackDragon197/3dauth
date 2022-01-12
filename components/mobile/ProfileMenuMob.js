@@ -3,7 +3,7 @@ import * as React from "react";
 import PaymentComponentMob from './PaymentComponentMob'
 import HistoryComponent from "./../HistoryComponent";
 import ReferalComponent from "./../ReferalComponent";
-import MoneyBack from "./../MoneyBack";
+import MoneyBackMob from "./MoneyBackMob";
 import CurrentIndexMob from "./CurrentIndexMob";
 import { TiTickOutline } from "react-icons/ti";
 import { TiFlowMerge } from "react-icons/ti";
@@ -36,7 +36,7 @@ class ProfileMenu extends React.Component {
     case "ReferalComponent":
       return <ReferalComponent />
     case "MoneyBack":
-      return <MoneyBack props={this.props}/>
+      return <MoneyBackMob props={this.props}/>
     case "CurrentIndexMob":
       return <CurrentIndexMob props={this.props}/>
   }
