@@ -1,5 +1,21 @@
 import * as React from "react";
 import  { PropTypes } from 'react'
+import emailjs from 'emailjs-com'
+
+import{ init } from 'emailjs-com';
+init("user_t18aTjWVzTkXBjZSIEkUa");
+
+function sendEmail(e) {
+  e.preventDefault();
+
+  emailjs.sendForm('service_kww6hls', 'template_9tqewk8', e.target, 'user_t18aTjWVzTkXBjZSIEkUa')
+    .then((result) => {
+        console.log(result.text);
+    }, (error) => {
+        console.log(error.text);
+    });
+    e.target.reset();
+}
 
 class HistoryComponent extends React.Component {
   constructor(props) {
@@ -17,6 +33,9 @@ handleChange = event => {
 setMax = () =>{
   this.setState({number: this.props.props.auth.user.available});
 }
+
+
+
     render() {
         const {number} = this.state
       const{user} = this.props.props.auth;
@@ -36,18 +55,22 @@ setMax = () =>{
                     </div>
                 </div>
                 <div className="mobeybackform">
-                <h3>Заказать выплату</h3>
-                Сумма выплаты:<br/>
-                <div style={{display: 'inline-flex'}}>
-                  <div>
-                    <input type="number" className="input-email blacked maxinput" name="number" value={this.state.number} onChange={this.handleChange} />
-                  </div>
-                  <div>
-                    <input className="input-submit maxbut" type="button" onClick={this.setMax} value="MAX"/>
-                  </div>
+                  <h3>Заказать выплату</h3>
+                  Сумма выплаты:<br/>
+                  <form onSubmit={sendEmail} >
+                    <div style={{display: 'inline-flex'}}>
+                      <div>
+                      <input type="number" className="input-email blacked maxinput" name="summ" value={this.state.number} onChange={this.handleChange} />
+                      </div>
+                      <div>
+                        <input className="input-submit maxbut" type="button" onClick={this.setMax} value="MAX"/>
+                      </div>
+                      <input type="hidden" name="email" value={user.email} />
+                    </div>
+                    <button type="submit" className="moneybackbut input-submit">Заказать выплату</button>
+                  </form>
                 </div>
-                  <button className="moneybackbut input-submit">Заказать выплату</button>
-                </div>
+                
                 </div>
               </div>
           </div>

@@ -118,7 +118,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     text-align: center;
     color: rgb(33, 33, 33);
     font-weight: 100;
-    text-transform: capitalize;
     letter-spacing: 4px;
     font-family: 'Roboto', sans-serif;
   }
@@ -127,7 +126,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     text-align: center;
     color: rgb(33, 33, 33);
     font-weight: 400;
-    text-transform: capitalize;
     letter-spacing: 2px;
     font-family: 'Roboto', sans-serif;
   }
