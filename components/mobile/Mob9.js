@@ -36,7 +36,7 @@ export default function Block(){
                         <div className="stock-imgbox1">
                             <img src="/block9/2.png"/>
                         </div>
-                        <div className="stock-textbox1"><span>Станьте лидером месяца</span> по привлечённым клиентам и получите 50 000 Р 
+                        <div className="stock-textbox1"><span>Станьте лидером месяца</span> по привлечению клиентов и получите 50 000 рублей
                         </div>
                     </div>
                     <div>

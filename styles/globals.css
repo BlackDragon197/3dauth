@@ -1065,3 +1065,12 @@ body {
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
 }
+
+.diga p{
+color: black;
+font-weight: 600;
+font-family: 'Gilroy';
+font-style: normal;
+letter-spacing: normal;
+text-align: left;
+}

@@ -82,7 +82,7 @@ position: relative;
 `
 
 const BlockHead = styled.span`
-font-family: 'Lato', sans-serif;;
+font-family: 'Lato', sans-serif;
 font-style: normal;
 font-weight: bold;
 font-size: 1.563vw;

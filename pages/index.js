@@ -117,11 +117,12 @@ if(!isMobile){
       
     </div>  
     <InBlock2 />  
+    <InBlock6 /> 
     <InBlock3 />  
     
     <div style={{height: '16.53vh'}}></div> 
     <InBlock5 />  
-    <InBlock6 />  
+     
     <InBlock7 />  
     <InBlock8 /> 
     <InBlock9 /> 
@@ -162,9 +163,10 @@ if(!isMobile){
         
         <Mob1 />
         <Mob2 />
+        <Mob6 />
         <Mob3 />
         <Mob5 />
-        <Mob6 />
+        
         <Mob7 />
         <Mob8 />
         <Mob9 />

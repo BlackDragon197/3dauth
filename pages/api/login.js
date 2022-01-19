@@ -20,6 +20,7 @@ export default async function handler(req, res) {
         headers: {'Content-Type': 'application/json'}
     })
     try{
+        console.log("ibanyukek: ", typeof email)
     const user = await requestInstance({url: 'getUser',data:{email: email, password: password}
     })
     console.log('tut kek from server.js ', user)

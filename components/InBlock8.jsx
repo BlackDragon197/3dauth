@@ -25,11 +25,11 @@ export default function Block(){
 <br /> <br />За годы существования компания провела огромное количество сделок в разных сферах. </div></div>
                 <div></div>
                 <div></div>
-                <div className="state-type2"><div className="vertical-align"><img src="/block8/2.png" /></div><div>Компания Pegas Capital выполнила более 200 крупных инвестиционных проектов и совершила тысячи успешных сделок на крупнейших мировых биржах</div></div>
+                <div className="state-type2"><div className="vertical-align"><img src="/block8/2.png" /></div><div>Компания Pegas Capital выполнила более 200 крупных инвестиционных проектов и совершила тысячи успешных сделок на мировых биржах.</div></div>
                 <div className="state-type2"><div className="vertical-align"><img src="/block8/3.png" /></div><div>Наша цель — это создание крупнейшей в СНГ финансовой организации с миллионами довольных клиентов.</div></div>
                 <div></div>
                 <div></div>
-                <div className="state-type2"><div className="vertical-align"><img src="/block8/4.png" /></div><div>Наш доход на прямую зависит от дохода наших инвесторов. Чем больше зарабатываете вы, тем больше зарабатываем мы</div></div>
+                <div className="state-type2"><div className="vertical-align"><img src="/block8/4.png" /></div><div>Наш доход напрямую зависит от дохода наших инвесторов. Чем больше зарабатываете вы, тем больше зарабатываем мы.</div></div>
             </div>
             <style jsx>
             {`
