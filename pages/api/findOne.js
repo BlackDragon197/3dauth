@@ -1,12 +1,14 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import { UserModel } from "../../utils/UserModel"
 
-export default function handler(req, res) {
-  const {email} = req.body
-    console.log("req.body: ",req.body)
+export default async function handler(req, res) {
+  console.log("req.body: ",req)
+  if (req.method === 'POST') {
+  const {email} = await req.body
+    
     console.log("email: ",email)
           //document exists }); 
-          UserModel.findOne({'email': "emailo@mail.nen"})
+          UserModel.findOne({email: email})
           .exec(function (err, users) {
             // var usersList = []
 
@@ -19,7 +21,11 @@ export default function handler(req, res) {
             })           
             //res.cookie('token', user/*, COOKIE_OPTIONS*/)
             //console.log(user);
-          
+  }
+ else if(req.method === 'OPTIONS'){
+  // Handle any other HTTP method
+  res.status(200).json({status:"okkk"})
+}
        
     
 

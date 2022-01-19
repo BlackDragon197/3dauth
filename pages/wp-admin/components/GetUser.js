@@ -7,7 +7,7 @@ import { GetUserModel } from "../../../utils/GetUserModel"
 export default class RegistrationForm extends React.Component{
 
     state = {
-        foundUser:'',
+        findAll:'',
         adminPassword:'',
         email:''
 
@@ -16,26 +16,29 @@ export default class RegistrationForm extends React.Component{
         this.setState({[event.target.name]: event.target.value});
     }
     handleSubmit = async event => {
-      const {adminPassword, email} = this.state
+      const {adminPassword, email, findAll} = this.state
     
         event.preventDefault();
        
         //console.log(this.state);
         if (adminPassword == "000qqq"){
             const requestInstance = axios.create({
-                method:'GET',
+                method:'POST',
                 baseURL: process.env.API,
                 headers: {'Content-Type': 'application/json'}
             })
-            const updateModel = new GetUserModel("emailo@mail.nen")
-            console.log(updateModel.data)
-            const user = await requestInstance({url: 'findOne', data:updateModel})
-            this.setState({findAll: user.data})
-            console.log(this.state)
+            const updateModel = new GetUserModel(email)
+            console.log(updateModel.email)
+            const user = await requestInstance({url: 'findOne', data: {email: email}})
+            // this.setState({userEmail: user.data.email})
+            this.setState(prevState => ({
+                ...prevState, findAll: user.data
+            }))
+            console.log("findAll: ",findAll )
         
          //const user = await requestInstance({url: 'getUser',data:{email: "emailo@mail.nen"} })
       // const user = UserModel.findOne({'email': emailo})
-         console.log(user)
+         
     }
         else {
             alert('Пароль админа не введён или введён неправильно!')
@@ -53,7 +56,7 @@ export default class RegistrationForm extends React.Component{
         this.setState({ error})
     }
         render(){
-            const {adminPassword, email} = this.state
+            const {adminPassword, email, findAll} = this.state
            
       
            
@@ -68,7 +71,13 @@ export default class RegistrationForm extends React.Component{
                         
                         <table>
          <tbody>
+             {Object.keys(findAll)?.map(
+(keke) => 
+<tr><td>{keke} : {findAll[keke]}</td></tr>
+)
              
+             }
+             {/* {findAll?.map(} */}
         
          </tbody>
        </table>
