@@ -16,7 +16,6 @@ export default async function handler(req, res) {
             //         usersList[user.email] = {}
             //     })
             var usersList = users
-               
             res.json(usersList);
             })           
             //res.cookie('token', user/*, COOKIE_OPTIONS*/)
